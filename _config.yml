@@ -1,0 +1,48 @@
+permalink: /:year/:month/:day/:title.html
+paginate: 10
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+# 作者信息
+author: 
+  name: 麦子
+  email: woshiyouxiangyo@gmail.com
+  link: http://pengweifu.tk
+  github: http://github.com/pengweifu
+
+# 站点信息
+title: 麦子的博客 
+description: 麦子的博客 
+url: http://pengweifu.tk
+rss_url: /pages/atom.xml
+
+# gavatar头像及Favicon
+gavatar: http://7u2ho6.com1.z0.glb.clouddn.com/gavatar.png
+favicon: http://7u2ho6.com1.z0.glb.clouddn.com/favicon.ico
+
+# google analytics 设置
+#ga:
+#  id: UA-54767140-1
+#  url: pengweifu.tk
+
+# disqus 设置
+disqus:
+  shortname: pengweifu
+
+# 主题设置，自动激活某个标签
+active: 技术
+
+# 首页除了最新文章外显示分类
+cates: 
+  - Python
+  - OpenStack
+
+# 中文本地化
+locals:
+  tags: 标签
+  about: 关于
+  newest: 最新文章
+  archive: 归档
+  content: 目录
