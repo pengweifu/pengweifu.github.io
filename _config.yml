@@ -19,8 +19,8 @@ url: http://pengweifu.tk
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: https://www.dropbox.com/s/0g61h6taftlmy2i/cat1.jpg?dl=0
-favicon: https://www.dropbox.com/s/6tb2qnzwaxj3q2l/favicon.ico?dl=0
+gavatar: http://pengweifu.github.io/public/img/face.jpg
+favicon: http://pengweifu.github.io/public/img/favicon.ico
 
 # google analytics 设置
 #ga:
