@@ -33,12 +33,12 @@ disqus:
   shortname: pengweifu
 
 # 主题设置，自动激活某个标签
-active: PHP
+active: php
 
 # 首页除了最新文章外显示分类
 cates: 
-  - PHP
-  - ASP
+  - php
+  - asp
 
 # 中文本地化
 locals:

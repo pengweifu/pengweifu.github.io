@@ -1,8 +1,8 @@
 ---
 layout: post
 title: PHP5.3-5.5废弃与过期函数整理汇总
-category: PHP
-tags: PHP
+category: php
+tags: php
 description: PHP5.3-5.5废弃与过期函数整理汇总
 ---
 
