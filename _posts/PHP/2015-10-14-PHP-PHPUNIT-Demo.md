@@ -17,42 +17,42 @@ PHPUnit 5.0 需要 PHP 5.6,PHP 5.4只能使用PHPUnit 4.8.9.要获取 PHPUnit，
 ## PHPUnit基本使用
 1. 新建一个类文件sample.php
 ```
-<?php
-class RemoteConnect
-{
-    public function connectToServer($serverName = null)
+    <?php
+    class RemoteConnect
     {
-        if ($serverName == null) {
-            throw new Exception("That's not a server name!");
+        public function connectToServer($serverName = null)
+        {
+            if ($serverName == null) {
+                throw new Exception("That's not a server name!");
+            }
+            $fp = fsockopen($serverName, 80);
+            return ($fp) ? true : false;
         }
-        $fp = fsockopen($serverName, 80);
-        return ($fp) ? true : false;
+        public function returnSampleObject()
+        {
+            return $this;
+        }
     }
-    public function returnSampleObject()
-    {
-        return $this;
-    }
-}
 ```
 2. 新建单元测试类文件test.php
 ```
-<?php
-require_once('sample.php');
-class RemoteConnectTest extends PHPUnit_Framework_TestCase
-{
-    public function setUp()
+    <?php
+    require_once('sample.php');
+    class RemoteConnectTest extends PHPUnit_Framework_TestCase
     {
+        public function setUp()
+        {
+        }
+        public function tearDown()
+        {
+        }
+        public function testConnectionIsValid()
+        {
+            // test to ensure that the object from an fsockopen is valid
+            $connObj    = new RemoteConnect();
+            $serverName = 'www.a.com';
+            $this->assertTrue($connObj->connectToServer($serverName) == false);
+        }
     }
-    public function tearDown()
-    {
-    }
-    public function testConnectionIsValid()
-    {
-        // test to ensure that the object from an fsockopen is valid
-        $connObj    = new RemoteConnect();
-        $serverName = 'www.a.com';
-        $this->assertTrue($connObj->connectToServer($serverName) == false);
-    }
-}
 ```
 3. 新开一个CMD,输入代码`phpunit test.php文件路径`,查看测试结果是否OK.
