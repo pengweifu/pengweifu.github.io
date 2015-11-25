@@ -156,7 +156,7 @@ header nav li:first-child a {
   line-height: 100%;
 }
 .g-category li {
-  margin: 1em 0;
+  margin-top: 1em;
 }
 .g-category a {
   color: #666;
@@ -165,9 +165,9 @@ header nav li:first-child a {
 }
 .g-category a i {
   display: block;
-  font-size: 6rem;
-  width: 7rem;
-  height: 7rem;
+  font-size: 5rem;
+  width: 6rem;
+  height: 6rem;
   line-height: 100%;
   margin: 0 auto;
   border-radius: 50%;
