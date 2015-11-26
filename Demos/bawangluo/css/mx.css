@@ -243,17 +243,17 @@ a {
 }
 .g-service {
   text-align: center;
-  padding: 40px 0;
+  padding-top: 50px;
   font-family: "Microsoft Yahei";
 }
 .g-service ul {
   display: block;
-  margin: 40px 0;
+  margin: 50px 0 60px 0;
 }
 .g-service ul li {
   border: 1px solid #959595;
   border-left-width: 0;
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
 }
 .g-service ul li:first-child {
   border-left: 1px solid #959595;
@@ -269,7 +269,7 @@ a {
 }
 .g-service ul li .icon {
   display: block;
-  margin: 20px auto;
+  margin: 5px auto;
   width: 100px;
   height: 100px;
 }
@@ -296,7 +296,8 @@ a {
 }
 .g-service ul li span {
   display: block;
-  padding-bottom: 10px;
+  font-weight: 700;
+  padding-bottom: 20px;
 }
 .g-service ul li span .red {
   color: #f32b2a;
@@ -309,7 +310,6 @@ a {
   font-size: 1.2em;
   padding: 0 40px;
   border-radius: 10px;
-  font-weight: 700;
 }
 .g-service ul li:hover {
   margin: -1px;
@@ -324,7 +324,7 @@ a {
   min-width: 1100px;
 }
 .g-advantage h2 {
-  padding: 40px 0;
+  padding: 60px 0 40px 0;
 }
 .g-advantage .icon {
   display: block;
@@ -350,7 +350,7 @@ a {
 .g-advantage span {
   display: block;
   color: #ffffff;
-  font-size: 1.5em;
+  font-size: 16px;
   line-height: 150%;
   margin-bottom: 40px;
 }
@@ -369,7 +369,7 @@ a {
   color: #e44e4d;
 }
 .g-news h3 {
-  font: 2.4em/200% normal "Microsoft Yahei";
+  font: 28px/200% normal "Microsoft Yahei";
 }
 .g-news .c7 .m-server {
   padding-top: 40px;
@@ -379,7 +379,7 @@ a {
   width: 50%;
   border: 1px solid #959595;
   border-left-width: 0;
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
   text-align: center;
 }
 .g-news .c7 li:first-child {
@@ -387,8 +387,9 @@ a {
 }
 .g-news .c7 li span {
   display: block;
-  padding: 10px 0;
-  font-size: 1.5em;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 20px;
 }
 .g-news .c7 li span .red {
   color: #f32b2a;
@@ -402,15 +403,19 @@ a {
   line-height: 200%;
   font-size: 1.2em;
   padding: 0 40px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-weight: 700;
 }
 .g-news .c7 li .btn {
-  padding: 0 20px;
-  font: 1.8em/250% normal "Microsoft Yahei";
+  font: 18px/30px normal "Microsoft Yahei";
   background: #e44e4d;
   color: #ffffff;
   border-radius: 50px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 20px;
+  margin-top: 20px;
 }
 .g-news .c7 li a {
   color: #959595;
@@ -420,7 +425,6 @@ a {
   font-size: 2em;
   color: #313131;
   line-height: 200%;
-  font-weight: 700;
 }
 .g-news .c7 li:hover {
   margin: -1px;
@@ -434,15 +438,15 @@ a {
 }
 .g-news .c5 h3 {
   border-bottom: 1px solid #959595;
-  font: 2em/150% normal "Microsoft Yahei";
+  font: 20px/150% normal "Microsoft Yahei";
   margin-bottom: 20px;
 }
 .g-news .c5 h3 span {
-  border-bottom: 5px solid #e44e4d;
+  border-bottom: 4px solid #e44e4d;
 }
 .g-news .c5 ul {
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .g-news .c5 ul li a {
   font: 1.2em/190% normal "Microsoft Yahei";
@@ -464,14 +468,16 @@ a {
   border-right: 1px dashed #959595;
 }
 .g-footer dt {
-  font-size: 2.5em;
+  font-size: 28px;
   width: 4em;
-  border-bottom: 1px solid #959595;
+  border-bottom: 1px solid #ffffff;
+  color: #ccc;
+  padding-bottom: 5px;
   margin-bottom: 10px;
 }
 .g-footer dd {
-  font-size: 1.4em;
-  line-height: 160%;
+  font-size: 16px;
+  line-height: 30px;
   list-style-type: circle;
   list-style-position: inside;
   display: list-item;
@@ -483,11 +489,13 @@ a {
 }
 .g-footer .c4 h3 {
   font-size: 2.2em;
-  line-height: 250%;
+  line-height: 200%;
+  padding-bottom: 20px;
   color: #e44e4d;
 }
 .g-footer .c4 p {
-  font-size: 1.2em;
+  font-size: 16px;
+  line-height: 180%;
 }
 .g-footer a {
   color: #959595;
@@ -503,7 +511,7 @@ a {
 }
 .g-footer .m-links a {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 16px;
   *display: inline;
   *zoom: 1;
   padding: 0 10px;

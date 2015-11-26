@@ -246,15 +246,15 @@ a{
 }
 .g-service{
     text-align: center;
-    padding: @space*4 0;
+    padding-top: @space*5;
     font-family: "Microsoft Yahei";
     ul{
         display: block;
-        margin: @space*4 0;
+        margin: @space*5 0 @space*6 0;
         li{
             border: 1px solid @colorMuted;
             border-left-width: 0;
-            padding: @space;
+            padding: @space @space @space*3 @space;
             &:first-child{
                 border-left: 1px solid @colorMuted;
             }
@@ -269,7 +269,7 @@ a{
             }
             .icon{
                 display: block;
-                margin: @space*2 auto;
+                margin: 5px auto;
                 width: 100px;
                 height: 100px;
                 &.icon-controller{
@@ -296,7 +296,8 @@ a{
             }
             span{
                 display: block;
-                padding-bottom: @space;
+                font-weight: 700;
+                padding-bottom: @space*2;
                 .red{
                     color:@colorDanger;
                 }
@@ -309,7 +310,6 @@ a{
                 font-size: 1.2em;
                 padding: 0 @space*4;
                 border-radius: @space;
-                font-weight: 700;
             }
             &:hover{
                 margin:-1px;
@@ -326,7 +326,7 @@ a{
     text-align: center;
     min-width: 1100px;
     h2{
-        padding: @space*4 0;
+        padding: @space*6 0 @space*4 0;
     }
     .icon{
         display: block;
@@ -352,7 +352,7 @@ a{
     span{
         display: block;
         color: @colorReverse;
-        font-size: 1.5em;
+        font-size: 16px;
         line-height: 150%;
         margin-bottom: @space *4;
     }
@@ -371,7 +371,7 @@ a{
         }
     }
     h3{
-        font: 2.4em/200% normal "Microsoft Yahei";
+        font: 28px/200% normal "Microsoft Yahei";
     }
     .c7{
         .m-server{
@@ -382,15 +382,16 @@ a{
             width: 50%;
             border: 1px solid @colorMuted;
             border-left-width: 0;
-            padding: @space;
+            padding: @space @space @space*3 @space;
             text-align: center;
             &:first-child{
                 border-left: 1px solid @colorMuted;
             }
             span{
                 display: block;
-                padding: @space 0;
-                font-size: 1.5em;
+                margin: @space*2 0;
+                font-size: 14px;
+                line-height: 20px;
                 .red{
                     color:@colorDanger;
                     font-weight: 700;
@@ -404,15 +405,19 @@ a{
                 line-height: 200%;
                 font-size: 1.2em;
                 padding: 0 @space*4;
-                border-radius: @space;
+                border-radius: @space/2;
                 font-weight: 700;
             }
             .btn{
-                padding: 0 @space*2;
-                font: 1.8em/250% normal "Microsoft Yahei";
+                font: 18px/30px normal "Microsoft Yahei";
                 background: @colorPrimary;
                 color: @colorReverse;
                 border-radius: 50px;
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+                padding:0 @space*2;
+                margin-top: @space*2;
             }
             a{
                 color:@colorMuted;
@@ -421,7 +426,6 @@ a{
                     font-size: 2em;
                     color:@colorSecondary;
                     line-height: 200%;
-                    font-weight: 700;
                 }
             }
             &:hover{
@@ -439,15 +443,15 @@ a{
         }
         h3{
             border-bottom: 1px solid @colorMuted;
-            font: 2em/150% normal "Microsoft Yahei";
+            font: 20px/150% normal "Microsoft Yahei";
             margin-bottom: @space*2;
             span{
-                border-bottom: 5px solid @colorPrimary;
+                border-bottom: 4px solid @colorPrimary;
             }
         }
         ul{
             overflow: hidden;
-            margin-bottom: @space*2;
+            margin-bottom: @space*4;
             li{
                 a{
                     font: 1.2em/190% normal "Microsoft Yahei";
@@ -472,14 +476,16 @@ a{
         border-right: 1px dashed @colorMuted;
     }
     dt{
-        font-size: 2.5em;
+        font-size: 28px;
         width:4em;
-        border-bottom: 1px solid @colorMuted;
+        border-bottom: 1px solid @colorReverse;
+        color:#ccc;
+        padding-bottom: 5px;
         margin-bottom: @space;
     }
     dd{
-        font-size: 1.4em;
-        line-height: 160%;
+        font-size: 16px;
+        line-height: 30px;
         list-style-type: circle;
         list-style-position:inside;
         display:list-item;
@@ -490,11 +496,13 @@ a{
         padding-right: 0;
         h3{
             font-size: 2.2em;
-            line-height: 250%;
+            line-height: 200%;
+            padding-bottom: @space*2;
             color:@colorPrimary;
         }
         p{
-            font-size: 1.2em;
+            font-size: 16px;
+            line-height: 180%;
         }
     }
     a{
@@ -510,7 +518,7 @@ a{
         margin-top: @space*4;
         a{
             display: inline-block;
-            font-size: 1.2em;
+            font-size: 16px;
             *display: inline;
             *zoom: 1;
             padding:0 @space;
