@@ -1,3 +1,11 @@
+---
+layout: post
+title: ASP使用Jmail组件发送邮件
+category: asp
+tags: asp
+description: ASP使用Jmail组件发送邮件
+---
+
 ```
 <%@ codepage="65001"%>
 <%
