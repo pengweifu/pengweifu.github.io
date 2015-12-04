@@ -1,3 +1,11 @@
+---
+layout: post
+title: 使用PHPMailer发送邮件
+category: php
+tags: php
+description: ThinkPHP下使用PHPMailer发送邮件
+---
+
 # 测试文件内容
 ```
 error_reporting(E_ALL);
