@@ -67,7 +67,6 @@ server{
     fastcgi_param HTTPS on;
     fastcgi_param HTTP_SCHEME https;
     index  index.php index.html index.htm index.asp defualt.asp;
-
     server_name  ~^(?<subdomain>.+).a.com$;
     root   D:/Project/$subdomain;
     location / {
