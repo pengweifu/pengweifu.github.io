@@ -39,6 +39,9 @@ active: php
 cates: 
   - php
   - asp
+  - js
+  - server
+  - other
 
 # 中文本地化
 locals:
