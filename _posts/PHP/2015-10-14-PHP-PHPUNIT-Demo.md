@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PHPunit安装及入门演示
-category: php
+category: PHP
 tags: php
 description: Windows下PHPunit安装及入门演示
 ---

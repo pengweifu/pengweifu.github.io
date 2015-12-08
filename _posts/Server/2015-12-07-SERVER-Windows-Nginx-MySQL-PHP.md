@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WNMP一键管理脚本
-category: server
+category: Server
 tags: nginx
 description: WNMP一键管理脚本
 ---

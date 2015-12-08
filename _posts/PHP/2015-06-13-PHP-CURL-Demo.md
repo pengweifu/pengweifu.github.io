@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用PHP的curl模拟登陆
-category: php
+category: PHP
 tags: php
 description: 用PHP的curl模拟登陆
 ---

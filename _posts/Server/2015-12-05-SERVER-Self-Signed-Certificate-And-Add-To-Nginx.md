@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 为nginx配置https并自签名证书
-category: server
+category: Server
 tags: nginx
 description: 为nginx配置https并自签名证书
 ---

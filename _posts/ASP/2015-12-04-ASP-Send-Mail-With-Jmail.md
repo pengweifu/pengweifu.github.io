@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ASP使用Jmail组件发送邮件
-category: asp
+category: ASP
 tags: asp
 description: ASP使用Jmail组件发送邮件
 ---
