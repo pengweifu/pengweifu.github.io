@@ -13,7 +13,7 @@ var duoshuoQuery = {short_name:"pengweifu"};
         var url=window.location.href;
         var riqi=url.match(/\d+/g);
         var num=1;
-        if (riqi.length>0) {
+        if (riqi) {
             num=riqi.join('');
         }
         var title=$('title').html();
