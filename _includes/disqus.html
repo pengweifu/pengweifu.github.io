@@ -12,7 +12,10 @@ var duoshuoQuery = {short_name:"pengweifu"};
     $(function(){
         var url=window.location.href;
         var riqi=url.match(/\d+/g);
-        var num=riqi.join('');
+        var num=1;
+        if (riqi.length>0) {
+            num=riqi.join('');
+        }
         var title=$('title').html();
         $('.ds-thread').attr({
             'data-thread-key':num,
