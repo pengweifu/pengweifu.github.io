@@ -37,7 +37,7 @@ active: php
 
 # 首页除了最新文章外显示分类
 cates: 
-  - PHP
+  - php
 
 # 中文本地化
 locals:
