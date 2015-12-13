@@ -2,7 +2,7 @@
 layout: post
 title: ASP使用Jmail组件发送邮件
 category: ASP
-tags: asp
+tags: mail
 description: ASP使用Jmail组件发送邮件
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: ASP ServerVariables说明
 category: ASP
-tags: asp
+tags: servervariables
 description: ASP ServerVariables说明
 ---
 

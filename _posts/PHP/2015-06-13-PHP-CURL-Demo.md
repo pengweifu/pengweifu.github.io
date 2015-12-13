@@ -2,7 +2,7 @@
 layout: post
 title: 用PHP的curl模拟登陆
 category: PHP
-tags: php
+tags: curl
 description: 用PHP的curl模拟登陆
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: 使用艾恩无组件上传类上传文件演示
 category: ASP
-tags: asp
+tags: upload
 description: 使用艾恩无组件上传类上传文件演示
 ---
 

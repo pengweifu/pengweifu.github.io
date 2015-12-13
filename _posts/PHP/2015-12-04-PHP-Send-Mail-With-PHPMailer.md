@@ -2,7 +2,7 @@
 layout: post
 title: 使用PHPMailer发送邮件
 category: PHP
-tags: php
+tags: mail
 description: ThinkPHP下使用PHPMailer发送邮件
 ---
 
