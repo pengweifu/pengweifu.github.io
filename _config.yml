@@ -38,11 +38,6 @@ active: php
 # 首页除了最新文章外显示分类
 cates: 
   - PHP
-  - ASP
-  - Js
-  - SQL
-  - Server
-  - Other
 
 # 中文本地化
 locals:
