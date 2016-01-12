@@ -14,7 +14,8 @@
   </style>
 </head>
 <body>
-  <a class="btn">点击弹出对话框</a>
+  <a class="btn">点击弹出对话框加载本网页某些内容</a>
+  <a class="btn1">点击弹出对话框加载其他网页内容</a>
   <div class="hide">
     <form>
       <input type="text" placeholder="用户名">
@@ -23,10 +24,16 @@
     </form>
   </div>
   <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="jquery.artDialog.js?skin=default"></script>
+  <script src="artDialog.js?skin=default"></script>
+  <script src="plugins/iframeTools.js"></script>
   <script>
     $(function() {
-      $('.btn').dialog({content: $('#hide').html(),lock: true});
+      $('.btn').click(function(){
+        art.dialog({content: $('.hide').html()})
+      });
+      $('.btn1').click(function(){
+        art.dialog.open('http://pengweifu.github.io/Demos/haoanju/', {title: '加载其他网页内容',lock:true})
+      });
     })
   </script>
 </body>
