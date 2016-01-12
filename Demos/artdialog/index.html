@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  a{
+    display: block;
+    text-align: center;
+  }
+  .hide{
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <a class="btn">点击弹出对话框</a>
+  <div class="hide">
+    <form>
+      <input type="text" placeholder="用户名">
+      <input type="password" placeholder="密码">
+      <input type="submit">
+    </form>
+  </div>
+  <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="jquery.artDialog.js?skin=default"></script>
+  <script>
+    $(function() {
+      $('.btn').dialog({content: $('#hide').html(),lock: true});
+    })
+  </script>
+</body>
+</html>
