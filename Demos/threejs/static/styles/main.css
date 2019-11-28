@@ -1,0 +1,60 @@
+#app {
+  overflow: hidden;
+}
+#app canvas:focus {
+  outline: none;
+}
+body{
+  margin:0;
+  background: #000;
+  overflow-x: hidden;
+}
+#header{
+  height: 40px;
+}
+#header a{
+  text-decoration: none;
+  padding: 0 1em;
+  color: #fff;
+}
+#header a:hover{
+  color: #f00;
+}
+#header ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#header li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  line-height: 40px;
+}
+#header li li{
+  display: block;
+  line-height: 22px;
+}
+#header li ul{
+  position: absolute;
+  text-align: left;
+  left: 1em;
+  display: none;
+  background: #000;
+}
+#header li.hover ul{
+  display: block;
+}
+.pure-text-left{
+  text-align: left;
+}
+
+@media screen and (min-width: 1024px){
+  #header li:hover ul{
+    display: block;
+  }
+}

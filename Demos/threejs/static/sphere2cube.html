@@ -1,0 +1,262 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Untitled Document</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="1024" height="1024"></canvas>
+    <!-- 片段着色器程序 -->
+    <script id="shader-fs" type="x-shader/x-fragment">
+        precision mediump float;
+        varying vec2 v_TexCoord;
+        uniform sampler2D u_Sampler;//纹理取样器
+        uniform float PI;
+        void main() {
+          float r = 0.5;
+          //z轴正平面-z
+          //vec2 orig = vec2(0.5-v_TexCoord.x,v_TexCoord.y-0.5);
+          //float theta = atan(orig.x,r);
+          //float phi = atan(orig.y*cos(theta),r);
+
+          //z轴负平面-nz
+          //theta = theta+PI;
+
+          //x轴正平面-x
+          //vec2 orig = vec2(v_TexCoord.x-0.5,v_TexCoord.y-0.5);
+          //float theta = atan(r,orig.x);
+          //float phi = atan(orig.y*sin(theta),r);
+
+          //x轴负平面-nx
+          //theta = theta+PI;
+
+          //y轴正平面-y
+          vec2 orig = vec2(0.5-v_TexCoord.x,0.5-v_TexCoord.y);
+          float theta = atan(orig.x,orig.y);
+          float phi = atan(r*sin(theta),orig.x);
+
+          //y轴负平面-ny
+          //vec2 orig = vec2(0.5-v_TexCoord.x,v_TexCoord.y-0.5);
+          //float theta = atan(orig.x,orig.y);
+          //float phi = atan(r*sin(theta),orig.x);
+          //phi = -phi;
+
+          //超出范围处理
+          if(abs(theta)>PI){
+              if(theta>PI){
+                  theta -= 2.0*PI;
+              }else{
+                  theta += 2.0*PI;
+              }
+          }
+          if(abs(phi)>PI/2.0){
+              if(phi>PI/2.0){
+                  phi -= PI;
+              }else{
+                  phi += PI;
+              }
+          }
+          float x = theta/PI*0.5 + 0.5;
+          float y = phi/PI*2.0*0.5 + 0.5;
+
+          gl_FragColor = texture2D(u_Sampler, vec2(x,y));
+      }
+    </script>
+    <!-- 顶点着色器程序 -->
+    <script id="shader-vs" type="x-shader/x-vertex">
+      attribute vec4 a_Position;//顶点坐标
+      attribute vec2 a_TexCoord;//纹理坐标
+      varying vec2 v_TexCoord;
+      void main() {
+          gl_Position= a_Position;
+          v_TexCoord = a_TexCoord;
+      }
+    </script>
+    <script>
+      //初始化着色器
+      function initShaders(gl) {
+        var shaderProgram;
+        var fragmentShader = getShader(gl, 'shader-fs');
+        var vertexShader = getShader(gl, 'shader-vs');
+        //创建着色器
+        shaderProgram = gl.createProgram();
+        gl.attachShader(shaderProgram, vertexShader);
+        gl.attachShader(shaderProgram, fragmentShader);
+        //链接着色器程序
+        gl.linkProgram(shaderProgram);
+        //检查着色器是否成功链接
+        if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+          return null;
+        }
+        //链接成功后激活渲染器程序
+        gl.useProgram(shaderProgram);
+
+        //启用顶点缓冲区数组
+        return shaderProgram;
+      }
+
+      //根据id获得编译好的着色器
+      function getShader(gl, id) {
+        var shaderScript;
+        var theSource;
+        var currentChild;
+        var shader;
+
+        shaderScript = document.querySelector('#' + id);
+        if (!shaderScript) {
+          return null;
+        }
+        //获取着色器的文本内容保存到theSource
+        theSource = '';
+        currentChild = shaderScript.firstChild;
+        while (currentChild) {
+          if (currentChild.nodeType === currentChild.TEXT_NODE) {
+            theSource += currentChild.textContent;
+          }
+          currentChild = currentChild.nextSibling;
+        }
+        //创建顶点着色器或片段着色器
+        if (shaderScript.type === 'x-shader/x-fragment') {
+          shader = gl.createShader(gl.FRAGMENT_SHADER);
+        } else if (shaderScript.type === 'x-shader/x-vertex') {
+          shader = gl.createShader(gl.VERTEX_SHADER);
+        } else {
+          //非法类型返回null
+          return null;
+        }
+        gl.shaderSource(shader, theSource);
+        //编译着色器代码
+        gl.compileShader(shader);
+        //检查是否编译成功
+        if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+          console.log(gl.getShaderInfoLog(shader)); //打印编译失败信息
+          return null;
+        }
+        //成功编译返回编译好的着色器
+        return shader;
+      }
+      function main() {
+        var canvas = document.querySelector('#webgl');
+        var gl = canvas.getContext('webgl'); //获取canvas上下文
+        var shaderPorgram = initShaders(gl); //初始化着色器程序
+
+        var num = initVertexBuffers(gl, shaderPorgram);
+        var PI = gl.getUniformLocation(shaderPorgram, 'PI');
+        gl.uniform1f(PI, Math.PI);
+
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+        // Set texture
+        if (!initTextures(gl, shaderPorgram, num)) {
+          console.log('Failed to intialize the texture.');
+          return;
+        }
+      }
+
+      //初始化纹理
+      function initTextures(gl, shaderPorgram, n) {
+        var texture = gl.createTexture(); //创建纹理对象
+
+        if (!texture) {
+          console.log('Failed to create the texture object!');
+          return false;
+        }
+
+        var u_Sampler = gl.getUniformLocation(shaderPorgram, 'u_Sampler');
+        var image = new Image();
+        image.src = './images/zg1.jpg';
+        image.onload = function() {
+          loadTextures(gl, n, texture, u_Sampler, image);
+        };
+        return true;
+      }
+
+      //加载纹理图片
+      function loadTextures(gl, n, texture, u_Sampler, image) {
+        gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 1); //对纹理图像进行y轴反转
+        gl.activeTexture(gl.TEXTURE0); //激活纹理单元
+        gl.bindTexture(gl.TEXTURE_2D, texture); //绑定纹理对象
+
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); //配置纹理对象的参数
+
+        /**
+         * RENDER WARNING: texture bound to texture unit 0 is not renderable. It maybe non-power-of-2 and have incompatible texture filtering.
+         * 大致意思是纹理没有渲染成功，因为所使用的图片的分辨率不是2的幂数，2的幂数是指2*2、4*4、8*8、16*16...256*256...；
+         * 需要设置图形纹理参数时设置水平垂直拉伸。
+         */
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+        gl.texImage2D(
+          gl.TEXTURE_2D,
+          0,
+          gl.RGB,
+          gl.RGB,
+          gl.UNSIGNED_BYTE,
+          image
+        ); //将纹理图像分配给纹理对象
+
+        gl.uniform1i(u_Sampler, 0); //将0号纹理传给着色器中的取样器变量
+
+        gl.clear(gl.COLOR_BUFFER_BIT); // Clear <canvas>
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, n); // Draw the rectangle
+      }
+
+      //初始化顶点位置
+      function initVertexBuffers(gl, shaderPorgram) {
+        //顶点坐标和纹理坐标映射关系
+        var datas = new Float32Array([
+          //顶点坐标、纹理坐标
+          -1.0,
+          1.0,
+          0.0,
+          1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0
+        ]);
+
+        var num = 4; //顶点数目
+        var vertexBuffer = gl.createBuffer(); //创建缓冲区对象
+
+        if (!vertexBuffer) {
+          console.log('Failed to create the buffer object!');
+          return -1;
+        }
+
+        //将缓冲区对象绑定到目标并写入数据
+        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, datas, gl.STATIC_DRAW);
+
+        var size = datas.BYTES_PER_ELEMENT; //数组中的每个元素的大小（以字节为单位）
+
+        //顶点着色器接受顶点坐标和纹理坐标映射关系
+        var a_Position = gl.getAttribLocation(shaderPorgram, 'a_Position');
+        gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, size * 4, 0);
+        gl.enableVertexAttribArray(a_Position);
+
+        var a_TexCoord = gl.getAttribLocation(shaderPorgram, 'a_TexCoord');
+        gl.vertexAttribPointer(
+          a_TexCoord,
+          2,
+          gl.FLOAT,
+          false,
+          size * 4,
+          size * 2
+        );
+        gl.enableVertexAttribArray(a_TexCoord);
+
+        return num;
+      }
+    </script>
+  </body>
+</html>

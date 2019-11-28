@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/mx.css" />
+  <script type="text/javascript" src="./bower_components/angularjs/angular.min.js"></script>
+  <title>Document</title>
+</head>
+<body ng-app="myapp" ng-controller="aboutController">
+    <div ng-include="'header.html'"></div>
+    <div class="g-inner">
+        <div class="container">
+            <div class="row">
+                <div class="c2">
+                    <div ng-include="'userbar.html'"></div>
+                </div>
+                <div class="c10">
+                    <div class="m-panel">
+                        <h3 class="title"><span>管理我的产品服务</span></h3>
+                        <div class="panel">
+                            <div class="m-tab">
+                                <p class="m-tabnav">
+                                    <span class="swiper-pagination-switch">全部</span>
+                                    <span class="swiper-pagination-switch">云主机</span>
+                                    <span class="swiper-pagination-switch">虚拟主机</span>
+                                    <span class="swiper-pagination-switch">服务器租用</span>
+                                    <span class="swiper-pagination-switch">服务器托管</span>
+                                </p>
+                                <div class="m-tabwrap swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <table class="sales">
+                                            <tr>
+                                                <th width="10%">服务项</th>
+                                                <th align="left">服务描述</th>
+                                                <th width="10%">价格(RMB)</th>
+                                                <th width="10%">到期时间</th>
+                                                <th width="5%">状态</th>
+                                                <th width="5%">自动续费</th>
+                                                <th width="10%">操作</th>
+                                            </tr>
+                                            <tr>
+                                                <td>单核</td>
+                                                <td align="left">单核 1 CPU / 1024M 内存 / 30G 硬盘 / 2M 端口 / 自助控制面板 /</td>
+                                                <td>￥ 30 元/月</td>
+                                                <td>2015-11-11</td>
+                                                <td>正常</td>
+                                                <td>是</td>
+                                                <td><a href="" class="btn">立即购买</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>单核</td>
+                                                <td align="left">单核 1 CPU / 1024M 内存 / 30G 硬盘 / 2M 端口 / 自助控制面板 /</td>
+                                                <td>￥ 30 元/月</td>
+                                                <td>2015-11-11</td>
+                                                <td>正常</td>
+                                                <td>是</td>
+                                                <td><a href="" class="btn">立即购买</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>单核</td>
+                                                <td align="left">单核 1 CPU / 1024M 内存 / 30G 硬盘 / 2M 端口 / 自助控制面板 /</td>
+                                                <td>￥ 30 元/月</td>
+                                                <td>2015-11-11</td>
+                                                <td>正常</td>
+                                                <td>是</td>
+                                                <td><a href="" class="btn">立即购买</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="swiper-slide">
+                                    </div>
+                                    <div class="swiper-slide">
+                                    </div>
+                                    <div class="swiper-slide">
+                                    </div>
+                                    <div class="swiper-slide">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'footer.html'"></div>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script>
+    angular.module("myapp", []).controller("aboutController", function($scope) {
+      //todo
+    });
+    var swiper = new Swiper('.m-tab', {
+        pagination: '.m-tabnav',
+        paginationClickable: true,
+        createPagination :false,
+    });
+    </script>
+</body>
+</html>

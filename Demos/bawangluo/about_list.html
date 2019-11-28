@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/mx.css" />
+  <script type="text/javascript" src="./bower_components/angularjs/angular.min.js"></script>
+  <title>Document</title>
+</head>
+<body ng-app="myapp" ng-controller="aboutController">
+    <div ng-include="'header.html'"></div>
+    <div class="g-inner">
+        <div class="container">
+            <div class="row">
+                <div class="c2">
+                    <div ng-include="'sidebar.html'"></div>
+                </div>
+                <div class="c10">
+                    <div class="m-breadcrumb">当前位置:<a href="">首页</a> &gt; <a href="">关于我们</a></div>
+                    <div class="m-tab">
+                        <p class="m-tabnav">
+                            <span class="swiper-pagination-switch">企业精神</span>
+                            <span class="swiper-pagination-switch">员工关爱</span>
+                        </p>
+                        <div class="m-tabwrap swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="m-editor">
+                                    深圳市南方联合科技有限公司是一家立足深圳、辐射全国的电信中立数据中心运营商，依托与电信运营商、IT 设备厂商在资源及渠道上的优势，借鉴业界成功运营经验，为用户提供持续、高速、安全的互联网数据中心服务（IDC）、企业数据中心服务（EDC）、以及基于云计算数据中心（CDC）的行业应用解决方案。南方联合数据中心 南方联合科技的市场机遇来自于向用户提供“一站式”数据中心服务，包括域名注册、云主机/VPS主机/虚拟主机、企业邮箱、主机托管、主机租用、机柜批发、带宽租用、机房租赁、通信专线接入等基础服务;应用系统开发、运维支持、应用管理、外包服务、信息安全、CDN网络加速等系统服务;以及IDC/EDC/云计算系统的规划建设、外包代管、市场运营等管理服务。南方联合科技与中国电信、中国联通、中国移动等国家级电信运营商在长期的合作中保持着紧密的战略伙伴关系，并与Dell、IBM、HP、联想、宝德等IT设备厂商建立了完全的渠道供应体系。SouIDC目前合作运营着近10个部署在深圳、广州、上海、北京、天津、成都、西安、杭州等国内重点城市的电信级A类数据中心机房，拥有120G以上骨干网总出口，机房总面积超过5,000平米。为保障对用户的服务，南方联合科技引入目前国际通行的服务品质协议(SLA , Service Level Agreement)，严格约定了SouIDC与用户之间在整个数据中心服务过程中各个环节上的服务品质（Qos, Quality of Service）的具体标准、违约补偿、及适用条款等，涵盖机房环境、网络带宽、电力供应、业务开通、服务响应、故障恢复、设备安全等，公平、客观、公正，以法律的形式充分保障双方的既有权益。
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="m-editor">
+                                    深圳市南方联合科技有限公司是一家立足深圳、辐射全国的电信中立数据中心运营商，依托与电信运营商、IT 设备厂商在资源及渠道上的优势，借鉴业界成功运营经验，为用户提供持续、高速、安全的互联网数据中心服务（IDC）、企业数据中心服务（EDC）、以及基于云计算数据中心（CDC）的行业应用解决方案。南方联合数据中心 南方联合科技的市场机遇来自于向用户提供“一站式”数据中心服务，包括域名注册、云主机/VPS主机/虚拟主机、企业邮箱、主机托管、主机租用、机柜批发、带宽租用、机房租赁、通信专线接入等基础服务;应用系统开发、运维支持、应用管理、外包服务、信息安全、CDN网络加速等系统服务;以及IDC/EDC/云计算系统的规划建设、外包代管、市场运营等管理服务。南方联合科技与中国电信、中国联通、中国移动等国家级电信运营商在长期的合作中保持着紧密的战略伙伴关系，并与Dell、IBM、HP、联想、宝德等IT设备厂商建立了完全的渠道供应体系。SouIDC目前合作运营着近10个部署在深圳、广州、上海、北京、天津、成都、西安、杭州等国内重点城市的电信级A类数据中心机房，拥有120G以上骨干网总出口，机房总面积超过5,000平米。为保障对用户的服务，南方联合科技引入目前国际通行的服务品质协议(SLA , Service Level Agreement)，严格约定了SouIDC与用户之间在整个数据中心服务过程中各个环节上的服务品质（Qos, Quality of Service）的具体标准、违约补偿、及适用条款等，涵盖机房环境、网络带宽、电力供应、业务开通、服务响应、故障恢复、设备安全等，公平、客观、公正，以法律的形式充分保障双方的既有权益。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'footer.html'"></div>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script>
+    var myapp=angular.module("myapp", []).controller("aboutController", function($scope) {
+          //todo
+          $scope.$on('ngRenderFinished', function (ngRepeatFinishedEvent) {
+             //
+          });
+        });
+        myapp.directive('onFinishRenderFilters',function ($timeout){
+            return{
+                restrict: 'EA',
+                replace: true,
+                link: function(scope,element,attr) {
+                    $timeout(function(){
+                        scope.$emit('ngRenderFinished');
+                    });
+                }
+            };
+        });
+    var swiper = new Swiper('.m-tab', {
+        pagination: '.m-tabnav',
+        paginationClickable: true,
+        createPagination :false,
+    });
+    </script>
+</body>
+</html>

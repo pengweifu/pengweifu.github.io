@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/mx.css" />
+  <script type="text/javascript" src="./bower_components/angularjs/angular.min.js"></script>
+  <title>Document</title>
+</head>
+<body ng-app="myapp" ng-controller="aboutController">
+    <div ng-include="'header.html'"></div>
+    <div class="g-inner">
+        <div class="container">
+            <div class="row">
+                <div class="c2">
+                    <div ng-include="'userbar.html'"></div>
+                </div>
+                <div class="c10">
+                    <div class="m-panel">
+                        <h3 class="title"><span>帐户升级享受优惠</span></h3>
+                        <div class="panel">
+                            <p>
+                                <label>用户级别:</label><span>普通用户</span>
+                                <label>账户余额:</label><span>0.00</span>
+                                <label>消费总额:</label><span>0.00</span>
+                            </p>
+                            <table class="sales">
+                                <tr>
+                                    <th width="10%">级别</th>
+                                    <th align="left">服务描述</th>
+                                    <th width="15%">价格(RMB)</th>
+                                    <th width="10%">操作</th>
+                                </tr>
+                                <tr>
+                                    <td>VIP一星</td>
+                                    <td align="left">折扣率:xxx</td>
+                                    <td>￥ 30 元/月</td>
+                                    <td><a href="" class="btn">立即升级</a></td>
+                                </tr>
+                                <tr>
+                                    <td>VIP二星</td>
+                                    <td align="left">折扣率:xxx</td>
+                                    <td>￥ 60 元/月</td>
+                                    <td><a href="" class="btn">立即升级</a></td>
+                                </tr>
+                                <tr>
+                                    <td>VIP三星</td>
+                                    <td align="left">折扣率:xxx</td>
+                                    <td>￥ 90 元/月</td>
+                                    <td><a href="" class="btn">立即升级</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'footer.html'"></div>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script>
+    angular.module("myapp", []).controller("aboutController", function($scope) {
+      //todo
+    });
+    var swiper = new Swiper('.m-tab', {
+        pagination: '.m-tabnav',
+        paginationClickable: true,
+        createPagination :false,
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/mx.css" />
+  <script type="text/javascript" src="./bower_components/angularjs/angular.min.js"></script>
+  <title>Document</title>
+</head>
+<body ng-app="myapp" ng-controller="newsListController">
+    <div ng-include="'header.html'"></div>
+    <div class="g-inner">
+        <div class="container">
+            <div class="row">
+                <div class="c2">
+                    <div ng-include="'sidebar.html'"></div>
+                </div>
+                <div class="c10">
+                    <div class="m-breadcrumb">当前位置:<a href="">首页</a> &gt; <a href="">关于我们</a></div>
+                    <div class="m-tab">
+                        <p class="m-tabnav">
+                            <span class="swiper-pagination-switch">公司新闻</span>
+                            <span class="swiper-pagination-switch">运维公告</span>
+                        </p>
+                        <div class="m-tabwrap swiper-wrapper">
+                            <div class="swiper-slide">
+                                <ul class="newslist">
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>2015年中秋节放假通知</a></li>
+                                </ul>
+                                <ul class="g-pagination">
+                                    <li class="disabled"><a href="#">&laquo;</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">&raquo;</a></li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">
+                                <ul class="newslist">
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                    <li><a href=""><span class="time">2015/9/22</span>关于规范“国”字头网站名称的使用通知</a></li>
+                                </ul>
+                                <ul class="g-pagination">
+                                    <li class="disabled"><a href="#">&laquo;</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">&raquo;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'footer.html'"></div>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script>
+    var myapp=angular.module("myapp", []).controller("newsListController", function($scope) {
+      //todo
+    });
+    var swiper = new Swiper('.m-tab', {
+        pagination: '.m-tabnav',
+        paginationClickable: true,
+        createPagination :false,
+    });
+    </script>
+</body>
+</html>
