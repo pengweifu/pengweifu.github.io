@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  #allmap {
+    height: 100%;
+    overflow: hidden;
+  }
+  #result {
+    border-left: 1px dotted #999;
+    height: 100%;
+    width: 295px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+  }
+  dl,
+  dt,
+  dd,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  dt {
+    font-size: 14px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    border-bottom: 1px dotted #000;
+    padding: 5px 0 5px 5px;
+    margin: 5px 0;
+  }
+  dd {
+    padding: 5px 0 0 5px;
+  }
+  li {
+    line-height: 28px;
+  }
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4&ak="></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.js"></script>
+  <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
+  <title>Baidu Map</title>
+</head>
+
+<body>
+  <div id="allmap" style="overflow:hidden;zoom:1;position:relative;">
+    <div id="map" style="height:100%;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;"></div>
+    <div id="showPanelBtn" style="display:block; position:absolute;font-size:14px;top:50%;margin-top:-95px;right:0px;width:20px;padding:10px 10px;color:#999;cursor:pointer;text-align:center;height:170px;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;font-family:'微软雅黑';font-weight:bold;"></div>
+    <div id="panelWrap" style="width:0px;position:absolute;top:0px;right:0px;height:100%;overflow:auto;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;">
+      <div style="width:20px;height:200px;margin:-100px 0 0 -10px;color:#999;position:absolute;opacity:0.5;top:50%;left:50%;">此处用于展示结果面板</div>
+      <div id="panel" style="position:absolute;"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  function $(id) {
+    return document.getElementById(id);
+  }
+  var wd = 0;
+  var jd = 0;
+
+  var myGeo = new BMap.Geocoder();
+  myGeo.getPoint("\u6DF1\u5733\u5E02\u7F57\u6E56\u533A\u7389\u9F99\u65B0\u6751B\u533A20\u680B505", function(point) {
+    if (point) {
+      jd = point.lng;
+      wd = point.lat;
+      var addr = "\u6DF1\u5733\u5E02\u7F57\u6E56\u533A\u7389\u9F99\u65B0\u6751B\u533A20\u680B505";
+      document.getElementById('showPanelBtn').style.backgroundColor = "#fff";
+      document.getElementById('showPanelBtn').innerHTML = "显示检索结果面板<br/>&lt;";
+      showmap(jd, wd, addr);
+    } else {
+      alert('地址无法查询');
+    }
+  }, "");
+
+  function showmap(jd, wd, addr) {
+    var map = new BMap.Map('map');
+    var poi = new BMap.Point(jd, wd);
+    map.centerAndZoom(poi, 19);
+    map.enableScrollWheelZoom();
+    Propertys(map);
+    showmark(map, poi, addr);
+  }
+
+  function showmark(map, poi, addr) {
+    var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+    '<img src="http://www.pengwf.com/UploadFiles/images/default/icon-qrcode.png" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+    '电话：18344014020<br/>邮箱:<a href="mailto:isemail@foxmail.com" target="_blank">isemail@foxmail.com</a><br/>地址：深圳市罗湖区玉龙新村B区20栋505' +
+    '</div>';
+    //创建检索信息窗口对象
+    var searchInfoWindow = null;
+    searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+      title: addr, //标题
+      width: 100, //宽度
+      height: 48, //高度
+      panel: "panel", //检索结果面板
+      enableAutoPan: true, //自动平移
+      enableSendToPhone: false,
+
+      searchTypes: [
+        BMAPLIB_TAB_SEARCH, //周边检索
+        BMAPLIB_TAB_TO_HERE, //到这里去
+        BMAPLIB_TAB_FROM_HERE //从这里出发
+      ]
+    });
+    var marker = new BMap.Marker(poi); //创建marker对象
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+    searchInfoWindow.open(marker);
+    marker.addEventListener("click", function(e) {
+      searchInfoWindow.open(marker);
+    })
+    map.addOverlay(marker); //在地图中添加marker   
+
+  }
+
+  var isPanelShow = false;
+  //显示结果面板动作
+  $("showPanelBtn").onclick = function() {
+    if (isPanelShow == false) {
+      isPanelShow = true;
+      $("showPanelBtn").style.right = "300px";
+      $("panelWrap").style.width = "300px";
+      $("map").style.marginRight = "300px";
+      $("showPanelBtn").innerHTML = "隐藏检索结果面板<br/>>";
+    } else {
+      isPanelShow = false;
+      $("showPanelBtn").style.right = "0px";
+      $("panelWrap").style.width = "0px";
+      $("map").style.marginRight = "0px";
+      $("showPanelBtn").innerHTML = "显示检索结果面板<br/><";
+    }
+  }
+
+  function Propertys(maps) {
+    //explain:三维地图加载百度内部js出错,暂时取消三维地图控件,author:fpf
+    maps.addControl(new BMap.MapTypeControl({
+      mapTypes: [BMAP_NORMAL_MAP, BMAP_SATELLITE_MAP, BMAP_HYBRID_MAP]
+    }));
+    maps.addControl(new BMap.ScaleControl());
+    maps.addControl(new BMap.NavigationControl());
+    maps.enableScrollWheelZoom();
+    maps.addControl(new BMap.OverviewMapControl()); //maps.setCurrentCity("北京"); 
+  }
+  </script>
+</body>
+
+</html>

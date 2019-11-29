@@ -1,0 +1,55 @@
+/*
+* @Author: pengweifu
+* @Date:   2017-09-24 16:23:15
+* @Last Modified by:   pengweifu
+* @Last Modified time: 2017-09-27 00:36:37
+*/
+html,body,#app{
+  height:100%;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.has-icon+p>.mu-checkbox{
+  padding-left: 15px;
+}
+.has-icon+p>.mu-checkbox+span{
+  vertical-align: top;
+  line-height: 24px;
+  display: inline-block;
+  color:#4078c0;
+  cursor: pointer;
+}
+.demo-popup {
+  width: 100%;
+  max-width: 375px;
+}
+.demo-list{
+  overflow: auto;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: content-box;
+  padding-bottom: 56px;
+}
+.demo-menu{
+  position: relative;
+}
+.demo-menu .mu-menu{
+  margin: 1px;
+}
+.demo-menu .avatar{
+  text-align: center;
+  background: #a4c639;
+}
+.demo-menu .mu-icon-button{
+  position: absolute;
+  top:0;
+  color:#fff;
+  right:0;
+}
+.mu-list .mu-text-field{
+  margin-bottom: 0;
+}

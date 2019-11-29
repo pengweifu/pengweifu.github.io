@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+  html,body {width: 100%;height: 100%;margin: 0;}
+  #allmap{overflow:hidden;zoom:1;position:relative;height: 100%;}
+  #container{width: 100%; height: 100%;transition: all 0.5s ease-in-out;}
+  #showPanelBtn{position:absolute;font-size:14px;top:50%;margin-top:-95px;right:0;width:20px;padding:10px;color:#999;cursor:pointer;text-align:center;height:170px;background:rgba(255,255,255,0.9);transition: all 0.5s ease-in-out;font-family:'微软雅黑';font-weight:bold;}
+  #panelWrap{width:0px;position:absolute;top:0;right:0;height:100%;overflow:auto;background:#fff;transition: all 0.5s ease-in-out;}
+  #panelWrap>div:first-child{width:20px;height:200px;margin:-100px 0 0 -10px;color:#999;position:absolute;opacity:0.5;top:50%;left:50%;}
+  #panel{position:absolute;}
+  </style>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=F5dadeb87de65231081fe88229c124e2"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+  <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+  <title>带检索功能的信息窗口</title>
+</head>
+
+<body>
+  <div id="allmap">
+  <div id="container"></div>
+  <div id="showPanelBtn">显示检索结果面板<br /><</div>
+  <div id="panelWrap">
+    <div>此处用于展示结果面板</div>
+    <div id="panel"></div>
+  </div>
+</div>
+  <script type="text/javascript">
+  // 百度地图API功能
+  var map = new BMap.Map('container');
+  var poi = new BMap.Point(114.109626,22.582206);
+  map.centerAndZoom(poi, 19);
+  map.enableScrollWheelZoom();
+
+  var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+    '<img src="http://www.pengwf.com/UploadFiles/images/default/icon-qrcode.png" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+    '电话：18344014020<br/>邮箱:<a href="mailto:isemail@foxmail.com" target="_blank">isemail@foxmail.com</a><br/>地址：深圳市罗湖区玉龙新村B区20栋505' +
+    '</div>';
+
+  //创建检索信息窗口对象
+  var searchInfoWindow = null;
+  searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+    title: "联系方式", //标题
+    width: 290, //宽度
+    height: 105, //高度
+    panel: "panel", //检索结果面板
+    enableAutoPan: true, //自动平移
+    searchTypes: [
+      BMAPLIB_TAB_SEARCH, //周边检索
+      BMAPLIB_TAB_TO_HERE, //到这里去
+      BMAPLIB_TAB_FROM_HERE //从这里出发
+    ]
+  });
+  var marker = new BMap.Marker(poi); //创建marker对象
+  marker.enableDragging(); //marker可拖拽
+  marker.addEventListener("click", function(e) {
+    searchInfoWindow.open(marker);
+  });
+  searchInfoWindow.open(marker);
+  map.addOverlay(marker); //在地图中添加marker
+
+  var isPanelShow = false;
+  //显示结果面板动作
+  $("#showPanelBtn").click(function () {
+    if (isPanelShow == false) {
+      isPanelShow = true;
+      $("#showPanelBtn").css({"right":"300px"});
+      $("#panelWrap").width(300);
+      $("#map").css({ "margin-right": "300px" });
+      $("#showPanelBtn").html("隐藏检索结果面板<br/>>");
+    } else {
+      isPanelShow = false;
+      $("#showPanelBtn").css({ "right": "0" });
+      $("#panelWrap").width(0);
+      $("#map").css({ "margin-right": "0" });
+      $("#showPanelBtn").html("显示检索结果面板<br/><");
+    }
+  });
+  </script>
+</body>
+
+</html>

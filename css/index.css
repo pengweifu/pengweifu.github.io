@@ -4498,6 +4498,51 @@ img:hover {
   background: #616a6b;
   color: #99a9bf;
 }
+[data-theme="dark"] #vcomment p,
+[data-theme="dark"] #vcomment a,
+[data-theme="dark"] #vcomment textarea,
+[data-theme="dark"] #vcomment .vemoji-btn,
+[data-theme="dark"] #vcomment .vpreview-btn,
+[data-theme="dark"] #vcomment input,
+[data-theme="dark"] #vcomment path,
+[data-theme="dark"] #vcomment .vcount,
+[data-theme="dark"] #vcomment .vnum,
+[data-theme="dark"] #vcomment .vtime,
+[data-theme="dark"] #vcomment .vsys,
+[data-theme="dark"] #vcomment .vnick {
+  color: #99a9bf !important;
+}
+[data-theme="dark"] #vcomment .vsys {
+  background: #616a6b !important;
+}
+[data-theme="dark"] #vcomment .vbtn {
+  background: #2d3035 !important;
+  color: #99a9bf !important;
+  border: 1px solid #99a9bf;
+}
+[data-theme="dark"] #vcomment .vwrap {
+  border: 1px solid #99a9bf;
+}
+[data-theme="dark"] #vcomment input {
+  border-bottom: 1px dashed #616a6b;
+}
+[data-theme="dark"] #vcomment .vh {
+  border-bottom: 1px dashed #616a6b;
+}
+[data-theme="dark"] #vcomment pre {
+  background-color: #2d3035;
+  border: 1px solid #99a9bf;
+}
+[data-theme="dark"] #vcomment .vcontent.expand:before {
+  background: -webkit-linear-gradient(270deg, hsla(0,0%,0%,0), hsla(218,8%,19%,1));
+  background: -moz-linear-gradient(270deg, hsla(0,0%,0%,0), hsla(218,8%,19%,1));
+  background: -o-linear-gradient(270deg, hsla(0,0%,0%,0), hsla(218,8%,19%,1));
+  background: -ms-linear-gradient(270deg, hsla(0,0%,0%,0), hsla(218,8%,19%,1));
+  background: linear-gradient(180deg, hsla(0,0%,0%,0), hsla(218,8%,19%,1));
+}
+[data-theme="dark"] #vcomment .vcontent.expand:after {
+  background: #35393b;
+}
 [data-theme="dark"] .recent-posts .recent-post-item {
   background: #2d3032 !important;
 }
