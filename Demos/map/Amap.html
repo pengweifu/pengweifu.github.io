@@ -548,7 +548,7 @@ ul, li, h1, h2, h3, h4, p, ol, dl, dt, dd {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJxJREFUeNpi/P//PwMlgIVxEpxdDMSNQMxNQM9XIK4H4l4QhwlJogsqwUgA10PVggEjw0S4F/5DFRAD4GqZGCgEVDEAFHhfkJxGDGaA6ikGhcFfClzyjwlJ83koJgSQ1TGxIEn8JtIlIBf/gyckJAkzIp1tQtVYYCEh8eA0AJaqSM1VYD0gL1wH4m9AfIuIfADDt2B6GCnNzgABBgAS6y6sqZWT8gAAAABJRU5ErkJggg==) 30px center no-repeat;
 }
   </style>
-  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=d701553e5db49d77bcf21da5eceac96c"></script>
+  <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=d701553e5db49d77bcf21da5eceac96c"></script>
   <title>高德地图</title>
 </head>
 
@@ -600,7 +600,7 @@ ul, li, h1, h2, h3, h4, p, ol, dl, dt, dd {
     <div class="trip_list_box">
     </div>
   </div>
-  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript">
   function Common() {
   function a(a) {
@@ -939,17 +939,17 @@ function Map(a) {
   function A(a) {
     C._map.clearMap();
     for (var b, c = a.routes[0].steps, d = a.start.location, e = a.end.location, f = a.waypoints, g = (new AMap.Marker({
-        icon: "http://webapi.amap.com/theme/v1.3/markers/n/starts.png",
+        icon: "https://webapi.amap.com/theme/v1.3/markers/n/starts.png",
         position: d,
         map: C._map
       }), new AMap.Marker({
-        icon: "http://webapi.amap.com/theme/v1.3/markers/n/ends.png",
+        icon: "https://webapi.amap.com/theme/v1.3/markers/n/ends.png",
         position: e,
         map: C._map
       }), 0); g < f.length; g++) {
       b = f[g].location;
       new AMap.Marker({
-        icon: "http://webapi.amap.com/theme/v1.3/markers/n/mids.png",
+        icon: "https://webapi.amap.com/theme/v1.3/markers/n/mids.png",
         position: b,
         map: C._map
       })
@@ -989,11 +989,11 @@ function Map(a) {
     new AMap.Marker({
       map: C._map,
       position: C._plans[a].start,
-      icon: "http://webapi.amap.com/theme/v1.3/markers/n/starts.png"
+      icon: "https://webapi.amap.com/theme/v1.3/markers/n/starts.png"
     }), new AMap.Marker({
       map: C._map,
       position: C._plans[a].end,
-      icon: "http://webapi.amap.com/theme/v1.3/markers/n/end.png"
+      icon: "https://webapi.amap.com/theme/v1.3/markers/n/end.png"
     });
     for (var e in c) busPolyline = new AMap.Polyline({
       map: C._map,

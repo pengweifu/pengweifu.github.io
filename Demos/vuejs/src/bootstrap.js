@@ -2,10 +2,10 @@
 * @Author: pengweifu
 * @Date:   2017-09-20 09:10:53
 * @Last Modified by:   pengweifu
-* @Last Modified time: 2017-09-27 13:45:20
+* @Last Modified time: 2019-12-07 15:08:57
 */
 require.config({
-  baseUrl: '/UploadFiles/files/vuejs/',
+  baseUrl: '/Demos/vuejs/',
   map: {
         '*': {
             'css': 'assets/js/requirecss.min'
