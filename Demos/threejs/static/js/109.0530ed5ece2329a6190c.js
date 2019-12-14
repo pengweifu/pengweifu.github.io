@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[109],{LBxN:function(e,n,t){"use strict";t.r(n);var p=function(e){var n=document.createElement("p");n.innerText="home",document.getElementById("app").appendChild(n)};n["default"]=p}}]);
