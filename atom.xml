@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2020-10-14T00:34:46.401Z</updated>
+  <updated>2020-10-16T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Hexo看板娘引起的页面重渲染</title>
+    <link href="https://www.pengwf.com/2020/10/17/web/JS-Hexo-live2d/"/>
+    <id>https://www.pengwf.com/2020/10/17/web/JS-Hexo-live2d/</id>
+    <published>2020-10-16T16:00:00.000Z</published>
+    <updated>2020-10-16T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">使用hexo-helper-live2d后,页面会在加载看板娘时重渲染,网页会有一段时间整个布局都是错乱的</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MariaDB无法登录[ERROR 1698(28000)]</title>
+    <link href="https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/"/>
+    <id>https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/</id>
+    <published>2020-10-15T16:00:00.000Z</published>
+    <updated>2020-10-15T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">新安装的MariaDB用mysql -u root -p无法登录,只能用sudo mysql -u root登录</summary>
+    
+    
+    
+    <category term="PHP" scheme="https://www.pengwf.com/categories/PHP/"/>
+    
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
+    
+  </entry>
   
   <entry>
     <title>web全栈工程师在Mac下的开发环境搭建</title>
@@ -371,44 +409,6 @@
     
     
     <category term="hex" scheme="https://www.pengwf.com/tags/hex/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>three.js 材质</title>
-    <link href="https://www.pengwf.com/2019/11/06/web/JS-threejs/"/>
-    <id>https://www.pengwf.com/2019/11/06/web/JS-threejs/</id>
-    <published>2019-11-05T16:00:00.000Z</published>
-    <updated>2019-12-11T12:00:22.805Z</updated>
-    
-    
-    <summary type="html">three.js 材质</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="threejs" scheme="https://www.pengwf.com/tags/threejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>纯CSS实现动态晴阴雨雪</title>
-    <link href="https://www.pengwf.com/2019/10/31/web/CSS-weather/"/>
-    <id>https://www.pengwf.com/2019/10/31/web/CSS-weather/</id>
-    <published>2019-10-30T16:00:00.000Z</published>
-    <updated>2019-11-28T17:18:33.717Z</updated>
-    
-    
-    <summary type="html">纯CSS实现动态晴阴雨雪</summary>
-    
-    
-    
-    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
     
   </entry>
   

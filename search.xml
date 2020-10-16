@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>解决Hexo看板娘引起的页面重渲染</title>
+      <link href="2020/10/17/web/JS-Hexo-live2d/"/>
+      <url>2020/10/17/web/JS-Hexo-live2d/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="解决Hexo看板娘引起的页面重渲染"><a href="#解决Hexo看板娘引起的页面重渲染" class="headerlink" title="解决Hexo看板娘引起的页面重渲染"></a>解决Hexo看板娘引起的页面重渲染</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>由于hexo-helper-live2d的依赖项<a href="https://github.com/xiazeyu/live2d-widget.js">live2d-widget.js</a>强行修改document.head的内容,增加样式,导致整个头部的资源重新加载了(包括头部引入的css文件),所以造成了页面重渲染.</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol><li>进入<code>/node_modules/live2d-widget/</code>文件夹,安装依赖<code>npm install</code></li><li>按照下面代码片段修改<code>/node_modules/live2d-widget/src/dialog/index.js</code>文件</li><li>打包<code>npm run build:prod</code></li><li>重新运行hexo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 将以下代码删除</span><br><span class="line">document.head.innerHTML +&#x3D; &#96;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  .live2d-widget-dialog-container &#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 120px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    bottom: 65%;</span><br><span class="line">    right: 0px;</span><br><span class="line">    transform-origin: right;</span><br><span class="line">    padding: 12px;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    -webkit-font-smoothing: antialiased;</span><br><span class="line">  &#125;</span><br><span class="line">  .live2d-widget-dialog &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    color: #917159;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">    padding: 12px;</span><br><span class="line">    border: 2px solid rgb(236, 203, 180);</span><br><span class="line">    background: rgb(252, 248, 244);</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">    transform: rotate(-2deg);</span><br><span class="line">    opacity: 0;</span><br><span class="line">    transition: 200ms opacity;</span><br><span class="line">    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;</span><br><span class="line">    animation: live2d-widget-dialog-tingle 4s ease-in-out 0s infinite alternate;</span><br><span class="line">  &#125;</span><br><span class="line">  @keyframes live2d-widget-dialog-tingle &#123;</span><br><span class="line">    0% &#123; transform: translate(-1px, 1.5px) rotate(-2deg); &#125;</span><br><span class="line">    100% &#123; transform: translate(1px, -1.5px) rotate(2deg); &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&#96;;</span><br><span class="line">&#x2F;&#x2F; 增加以下代码</span><br><span class="line">const dialogStyle &#x3D; document.createElement(&#39;style&#39;);</span><br><span class="line">dialogStyle.innerHTML &#x3D; &#96;</span><br><span class="line">  .live2d-widget-dialog-container &#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 120px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    bottom: 65%;</span><br><span class="line">    right: 0px;</span><br><span class="line">    transform-origin: right;</span><br><span class="line">    padding: 12px;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    -webkit-font-smoothing: antialiased;</span><br><span class="line">  &#125;</span><br><span class="line">  .live2d-widget-dialog &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    color: #917159;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">    padding: 12px;</span><br><span class="line">    border: 2px solid rgb(236, 203, 180);</span><br><span class="line">    background: rgb(252, 248, 244);</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">    transform: rotate(-2deg);</span><br><span class="line">    opacity: 0;</span><br><span class="line">    transition: 200ms opacity;</span><br><span class="line">    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;</span><br><span class="line">    animation: live2d-widget-dialog-tingle 4s ease-in-out 0s infinite alternate;</span><br><span class="line">  &#125;</span><br><span class="line">  @keyframes live2d-widget-dialog-tingle &#123;</span><br><span class="line">    0% &#123; transform: translate(-1px, 1.5px) rotate(-2deg); &#125;</span><br><span class="line">    100% &#123; transform: translate(1px, -1.5px) rotate(2deg); &#125;</span><br><span class="line">  &#125;&#96;;</span><br><span class="line">document.head.appendChild(dialogStyle);</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> exception </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MariaDB无法登录[ERROR 1698(28000)]</title>
+      <link href="2020/10/16/web/MYSQL-CANNOT-LOGIN/"/>
+      <url>2020/10/16/web/MYSQL-CANNOT-LOGIN/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="MariaDB无法登录-ERROR-1698-28000"><a href="#MariaDB无法登录-ERROR-1698-28000" class="headerlink" title="MariaDB无法登录[ERROR 1698(28000)]"></a>MariaDB无法登录[ERROR 1698(28000)]</h1><p>新安装的MariaDB用<code>mysql -u root -p</code>无法登录,提示ERROR 1698(28000),但是用<code>sudo mysql -u root -p</code>能登录成功.但是PHP是无法通过sudo来登录的,所以需要修改MariaDB的设置.</p><h2 id="安装MariaDB"><a href="#安装MariaDB" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mariadb-server</span><br></pre></td></tr></table></figure><h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><p>执行以下命令,按照提示输入密码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql -u root -p</span><br><span class="line">use mysql</span><br><span class="line">update user set plugin&#x3D;&#39;mysql_native_password&#39;;</span><br><span class="line">flush privileges;</span><br><span class="line">exit</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> PHP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> server </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>web全栈工程师在Mac下的开发环境搭建</title>
       <link href="2020/09/28/other/TOOL-Mac/"/>
       <url>2020/09/28/other/TOOL-Mac/</url>
