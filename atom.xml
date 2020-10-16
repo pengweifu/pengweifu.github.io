@@ -192,29 +192,6 @@
   </entry>
   
   <entry>
-    <title>iOS CRC16校验</title>
-    <link href="https://www.pengwf.com/2019/12/11/ios/IOS-CRC/"/>
-    <id>https://www.pengwf.com/2019/12/11/ios/IOS-CRC/</id>
-    <published>2019-12-10T16:00:00.000Z</published>
-    <updated>2019-12-10T16:14:49.760Z</updated>
-    
-    
-    <summary type="html">iOS CRC16校验</summary>
-    
-    
-    
-    <category term="iOS" scheme="https://www.pengwf.com/categories/iOS/"/>
-    
-    
-    <category term="crc" scheme="https://www.pengwf.com/tags/crc/"/>
-    
-    <category term="byte" scheme="https://www.pengwf.com/tags/byte/"/>
-    
-    <category term="hex" scheme="https://www.pengwf.com/tags/hex/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Android CRC16校验</title>
     <link href="https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/"/>
     <id>https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/</id>
@@ -227,6 +204,29 @@
     
     
     <category term="Android" scheme="https://www.pengwf.com/categories/Android/"/>
+    
+    
+    <category term="crc" scheme="https://www.pengwf.com/tags/crc/"/>
+    
+    <category term="byte" scheme="https://www.pengwf.com/tags/byte/"/>
+    
+    <category term="hex" scheme="https://www.pengwf.com/tags/hex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS CRC16校验</title>
+    <link href="https://www.pengwf.com/2019/12/11/ios/IOS-CRC/"/>
+    <id>https://www.pengwf.com/2019/12/11/ios/IOS-CRC/</id>
+    <published>2019-12-10T16:00:00.000Z</published>
+    <updated>2019-12-10T16:14:49.760Z</updated>
+    
+    
+    <summary type="html">iOS CRC16校验</summary>
+    
+    
+    
+    <category term="iOS" scheme="https://www.pengwf.com/categories/iOS/"/>
     
     
     <category term="crc" scheme="https://www.pengwf.com/tags/crc/"/>

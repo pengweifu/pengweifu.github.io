@@ -240,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/categories/index.html</loc>
+    <loc>https://www.pengwf.com/about/index.html</loc>
     
     <lastmod>2019-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/about/index.html</loc>
+    <loc>https://www.pengwf.com/categories/index.html</loc>
     
     <lastmod>2019-11-28</lastmod>
     
@@ -296,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2015/06/14/web/PHP-Deprecated-Function/</loc>
+    <loc>https://www.pengwf.com/2015/12/09/web/PHP-Change-MySQL-Data-Path/</loc>
     
     <lastmod>2019-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2015/12/09/web/PHP-Change-MySQL-Data-Path/</loc>
+    <loc>https://www.pengwf.com/2015/06/14/web/PHP-Deprecated-Function/</loc>
     
     <lastmod>2019-11-28</lastmod>
     
@@ -317,14 +317,14 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2011/04/01/web/Js-Dom-Node/</loc>
+    <loc>https://www.pengwf.com/2014/11/22/web/Js-Closure/</loc>
     
     <lastmod>2019-11-28</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2014/11/22/web/Js-Closure/</loc>
+    <loc>https://www.pengwf.com/2011/04/01/web/Js-Dom-Node/</loc>
     
     <lastmod>2019-11-28</lastmod>
     
@@ -424,7 +424,7 @@
 
   
   <url>
-    <loc>https://www.pengwf.com/tags/skill/</loc>
+    <loc>https://www.pengwf.com/tags/service/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -452,13 +452,6 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/tags/service/</loc>
-    <lastmod>2020-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.pengwf.com/tags/request/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -473,14 +466,7 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/tags/tools/</loc>
-    <lastmod>2020-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/server/</loc>
+    <loc>https://www.pengwf.com/tags/skill/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -508,6 +494,13 @@
   </url>
   
   <url>
+    <loc>https://www.pengwf.com/tags/server/</loc>
+    <lastmod>2020-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pengwf.com/tags/verify/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -515,21 +508,7 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/tags/canvas/</loc>
-    <lastmod>2020-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.pengwf.com/tags/threejs/</loc>
-    <lastmod>2020-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/dom/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -544,6 +523,20 @@
   
   <url>
     <loc>https://www.pengwf.com/tags/%E9%97%AD%E5%8C%85/</loc>
+    <lastmod>2020-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/tags/dom/</loc>
+    <lastmod>2020-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/tags/canvas/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -592,6 +585,13 @@
   </url>
   
   <url>
+    <loc>https://www.pengwf.com/tags/tools/</loc>
+    <lastmod>2020-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pengwf.com/tags/BLE/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -608,13 +608,6 @@
 
   
   <url>
-    <loc>https://www.pengwf.com/categories/iOS/</loc>
-    <lastmod>2020-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.pengwf.com/categories/Android/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -622,7 +615,7 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/categories/Other/</loc>
+    <loc>https://www.pengwf.com/categories/iOS/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -651,6 +644,13 @@
   
   <url>
     <loc>https://www.pengwf.com/categories/PHP/</loc>
+    <lastmod>2020-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/categories/Other/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
