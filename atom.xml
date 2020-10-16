@@ -59,7 +59,7 @@
     <link href="https://www.pengwf.com/2020/09/28/other/TOOL-Mac/"/>
     <id>https://www.pengwf.com/2020/09/28/other/TOOL-Mac/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-10-14T00:34:46.401Z</updated>
+    <updated>2020-09-27T16:00:00.000Z</updated>
     
     
     <summary type="html">web全栈工程师在Mac下的开发环境搭建</summary>
@@ -78,7 +78,7 @@
     <link href="https://www.pengwf.com/2020/05/15/other/TOOL-sourcetree/"/>
     <id>https://www.pengwf.com/2020/05/15/other/TOOL-sourcetree/</id>
     <published>2020-05-14T16:00:00.000Z</published>
-    <updated>2020-05-15T02:44:33.753Z</updated>
+    <updated>2020-05-14T16:00:00.000Z</updated>
     
     
     <summary type="html">SourceTree</summary>
@@ -97,7 +97,7 @@
     <link href="https://www.pengwf.com/2020/05/07/android/ANDROID-Okhttp3-timeout/"/>
     <id>https://www.pengwf.com/2020/05/07/android/ANDROID-Okhttp3-timeout/</id>
     <published>2020-05-06T16:00:00.000Z</published>
-    <updated>2020-05-07T07:55:28.899Z</updated>
+    <updated>2020-05-06T16:00:00.000Z</updated>
     
     
     <summary type="html">OKHTTP3域名解析超时时设置Timeout参数无效</summary>
@@ -116,7 +116,7 @@
     <link href="https://www.pengwf.com/2020/04/29/other/springboot2-http2/"/>
     <id>https://www.pengwf.com/2020/04/29/other/springboot2-http2/</id>
     <published>2020-04-28T16:00:00.000Z</published>
-    <updated>2020-04-28T16:34:58.717Z</updated>
+    <updated>2020-04-28T16:00:00.000Z</updated>
     
     
     <summary type="html">SpringBoot2 开启HTTP/2</summary>
@@ -135,7 +135,7 @@
     <link href="https://www.pengwf.com/2020/04/22/other/TOOL-Electron/"/>
     <id>https://www.pengwf.com/2020/04/22/other/TOOL-Electron/</id>
     <published>2020-04-21T16:00:00.000Z</published>
-    <updated>2020-04-21T16:32:42.971Z</updated>
+    <updated>2020-04-21T16:00:00.000Z</updated>
     
     
     <summary type="html">Electron 是一个使用 JavaScript, HTML 和 CSS 等 Web 技术创建原生程序的框架,它负责比较难搞的部分,你只需把精力放在你的应用的核心上即可。</summary>
@@ -154,7 +154,7 @@
     <link href="https://www.pengwf.com/2019/12/25/ios/IOS-WIFI/"/>
     <id>https://www.pengwf.com/2019/12/25/ios/IOS-WIFI/</id>
     <published>2019-12-24T16:00:00.000Z</published>
-    <updated>2019-12-25T12:26:21.713Z</updated>
+    <updated>2019-12-24T16:00:00.000Z</updated>
     
     
     <summary type="html">iOS13 获取已连接的WIFI名称</summary>
@@ -173,7 +173,7 @@
     <link href="https://www.pengwf.com/2019/12/25/web/PHP-Laravel/"/>
     <id>https://www.pengwf.com/2019/12/25/web/PHP-Laravel/</id>
     <published>2019-12-24T16:00:00.000Z</published>
-    <updated>2019-12-25T12:28:30.075Z</updated>
+    <updated>2019-12-24T16:00:00.000Z</updated>
     
     
     <summary type="html">Laravel+Passport构建API系统</summary>
@@ -194,7 +194,7 @@
     <link href="https://www.pengwf.com/2019/12/14/web/PHP-NGINX-SSL/"/>
     <id>https://www.pengwf.com/2019/12/14/web/PHP-NGINX-SSL/</id>
     <published>2019-12-13T16:00:00.000Z</published>
-    <updated>2019-12-14T12:08:25.062Z</updated>
+    <updated>2019-12-13T16:00:00.000Z</updated>
     
     
     <summary type="html">为nginx配置https并自签名证书</summary>
@@ -213,7 +213,7 @@
     <link href="https://www.pengwf.com/2019/12/12/web/JS-DRAG/"/>
     <id>https://www.pengwf.com/2019/12/12/web/JS-DRAG/</id>
     <published>2019-12-11T16:00:00.000Z</published>
-    <updated>2019-12-12T06:30:08.196Z</updated>
+    <updated>2019-12-11T16:00:00.000Z</updated>
     
     
     <summary type="html">根据拖拽进来的1024*1024px的图片,动态生成iPhone AppIcon多种尺寸图标</summary>
@@ -234,7 +234,7 @@
     <link href="https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/"/>
     <id>https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/</id>
     <published>2019-12-10T16:00:00.000Z</published>
-    <updated>2019-12-11T11:52:26.121Z</updated>
+    <updated>2019-12-10T16:00:00.000Z</updated>
     
     
     <summary type="html">Android CRC16校验</summary>
@@ -257,7 +257,7 @@
     <link href="https://www.pengwf.com/2019/12/11/ios/IOS-CRC/"/>
     <id>https://www.pengwf.com/2019/12/11/ios/IOS-CRC/</id>
     <published>2019-12-10T16:00:00.000Z</published>
-    <updated>2019-12-10T16:14:49.760Z</updated>
+    <updated>2019-12-10T16:00:00.000Z</updated>
     
     
     <summary type="html">iOS CRC16校验</summary>
@@ -280,7 +280,7 @@
     <link href="https://www.pengwf.com/2019/12/11/ios/IOS-BLE/"/>
     <id>https://www.pengwf.com/2019/12/11/ios/IOS-BLE/</id>
     <published>2019-12-10T16:00:00.000Z</published>
-    <updated>2019-12-11T12:02:17.625Z</updated>
+    <updated>2019-12-10T16:00:00.000Z</updated>
     
     
     <summary type="html">BLE开发</summary>
@@ -299,7 +299,7 @@
     <link href="https://www.pengwf.com/2019/12/10/web/JS-CRC/"/>
     <id>https://www.pengwf.com/2019/12/10/web/JS-CRC/</id>
     <published>2019-12-09T16:00:00.000Z</published>
-    <updated>2019-12-10T15:56:35.581Z</updated>
+    <updated>2019-12-09T16:00:00.000Z</updated>
     
     
     <summary type="html">Javascript CRC16校验</summary>
@@ -322,7 +322,7 @@
     <link href="https://www.pengwf.com/2019/11/29/other/TOOL-ubuntu/"/>
     <id>https://www.pengwf.com/2019/11/29/other/TOOL-ubuntu/</id>
     <published>2019-11-28T16:00:00.000Z</published>
-    <updated>2019-12-12T06:36:41.715Z</updated>
+    <updated>2019-11-28T16:00:00.000Z</updated>
     
     
     <summary type="html">安装elementary OS 5.0 Juno后必做的事</summary>
@@ -341,7 +341,7 @@
     <link href="https://www.pengwf.com/2019/11/26/android/ANDROID-gradle/"/>
     <id>https://www.pengwf.com/2019/11/26/android/ANDROID-gradle/</id>
     <published>2019-11-25T16:00:00.000Z</published>
-    <updated>2019-11-28T17:18:33.714Z</updated>
+    <updated>2019-11-25T16:00:00.000Z</updated>
     
     
     <summary type="html">在gradle中设置打包秘钥及输出apk名称</summary>
@@ -360,7 +360,7 @@
     <link href="https://www.pengwf.com/2019/11/25/android/ANDROID-Realpath/"/>
     <id>https://www.pengwf.com/2019/11/25/android/ANDROID-Realpath/</id>
     <published>2019-11-24T16:00:00.000Z</published>
-    <updated>2019-12-11T11:56:24.635Z</updated>
+    <updated>2019-11-24T16:00:00.000Z</updated>
     
     
     <summary type="html">Android uri转真实路径</summary>
@@ -379,7 +379,7 @@
     <link href="https://www.pengwf.com/2019/11/22/web/JS-Auto-Save-Page/"/>
     <id>https://www.pengwf.com/2019/11/22/web/JS-Auto-Save-Page/</id>
     <published>2019-11-21T16:00:00.000Z</published>
-    <updated>2019-12-11T12:03:06.372Z</updated>
+    <updated>2019-11-21T16:00:00.000Z</updated>
     
     
     <summary type="html">定时截图并发送到邮箱</summary>
@@ -398,7 +398,7 @@
     <link href="https://www.pengwf.com/2019/11/06/web/JS-Hex/"/>
     <id>https://www.pengwf.com/2019/11/06/web/JS-Hex/</id>
     <published>2019-11-05T16:00:00.000Z</published>
-    <updated>2019-12-07T06:40:18.822Z</updated>
+    <updated>2019-11-05T16:00:00.000Z</updated>
     
     
     <summary type="html">JS浮点数16进制与10进制之间的转换</summary>

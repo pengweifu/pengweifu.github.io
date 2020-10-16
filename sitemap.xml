@@ -18,21 +18,21 @@
   <url>
     <loc>https://www.pengwf.com/2020/09/28/other/TOOL-Mac/</loc>
     
-    <lastmod>2020-10-14</lastmod>
+    <lastmod>2020-09-27</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.pengwf.com/2020/05/15/other/TOOL-sourcetree/</loc>
     
-    <lastmod>2020-05-15</lastmod>
+    <lastmod>2020-05-14</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.pengwf.com/2020/05/07/android/ANDROID-Okhttp3-timeout/</loc>
     
-    <lastmod>2020-05-07</lastmod>
+    <lastmod>2020-05-06</lastmod>
     
   </url>
   
@@ -51,70 +51,28 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2019/12/25/web/PHP-Laravel/</loc>
+    <loc>https://www.pengwf.com/2019/12/25/ios/IOS-WIFI/</loc>
     
-    <lastmod>2019-12-25</lastmod>
+    <lastmod>2019-12-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2019/12/25/ios/IOS-WIFI/</loc>
+    <loc>https://www.pengwf.com/2019/12/25/web/PHP-Laravel/</loc>
     
-    <lastmod>2019-12-25</lastmod>
+    <lastmod>2019-12-24</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.pengwf.com/2019/12/14/web/PHP-NGINX-SSL/</loc>
     
-    <lastmod>2019-12-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/11/29/other/TOOL-ubuntu/</loc>
-    
-    <lastmod>2019-12-12</lastmod>
+    <lastmod>2019-12-13</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.pengwf.com/2019/12/12/web/JS-DRAG/</loc>
-    
-    <lastmod>2019-12-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/11/22/web/JS-Auto-Save-Page/</loc>
-    
-    <lastmod>2019-12-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/25/android/ANDROID-BLE/</loc>
-    
-    <lastmod>2019-12-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/12/11/ios/IOS-BLE/</loc>
-    
-    <lastmod>2019-12-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/11/06/web/JS-threejs/</loc>
-    
-    <lastmod>2019-12-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/11/25/android/ANDROID-Realpath/</loc>
     
     <lastmod>2019-12-11</lastmod>
     
@@ -123,7 +81,7 @@
   <url>
     <loc>https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/</loc>
     
-    <lastmod>2019-12-11</lastmod>
+    <lastmod>2019-12-10</lastmod>
     
   </url>
   
@@ -135,119 +93,21 @@
   </url>
   
   <url>
+    <loc>https://www.pengwf.com/2019/12/11/ios/IOS-BLE/</loc>
+    
+    <lastmod>2019-12-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.pengwf.com/2019/12/10/web/JS-CRC/</loc>
-    
-    <lastmod>2019-12-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-Hex-String/</loc>
-    
-    <lastmod>2019-12-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/23/ios/IOS-byte-string/</loc>
     
     <lastmod>2019-12-09</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2019/11/06/web/JS-Hex/</loc>
-    
-    <lastmod>2019-12-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/07/13/web/ASP-ServerVariables/</loc>
-    
-    <lastmod>2019-11-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2011/03/27/web/ASP-Access-Keywords/</loc>
-    
-    <lastmod>2019-11-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-google-access-helper/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-FeHelper/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-360/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-Fastston-capture/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-Meld/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-WinMerge/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-Everything/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/music/index.html</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/index.html</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/link/index.html</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/12/07/web/PHP-Windows-Nginx-MySQL-PHP/</loc>
+    <loc>https://www.pengwf.com/2019/11/29/other/TOOL-ubuntu/</loc>
     
     <lastmod>2019-11-28</lastmod>
     
@@ -256,175 +116,315 @@
   <url>
     <loc>https://www.pengwf.com/about/index.html</loc>
     
-    <lastmod>2019-11-28</lastmod>
+    <lastmod>2019-11-27</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/categories/index.html</loc>
+    <loc>https://www.pengwf.com/music/index.html</loc>
     
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/10/14/web/PHP-PHPUNIT-Demo/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/12/05/web/PHP-Self-Signed-Certificate-And-Add-To-Nginx/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/12/04/web/PHP-Send-Mail-With-PHPMailer/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2014/11/23/web/Js-Reload-Opener/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/06/13/web/PHP-CURL-Demo/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/12/08/web/PHP-Change-MSSQL-Data-Path/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/12/09/web/PHP-Change-MySQL-Data-Path/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/06/14/web/PHP-Deprecated-Function/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/31/web/CSS-weather/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2014/11/22/web/Js-Closure/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2011/04/01/web/Js-Dom-Node/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2014/12/03/web/Js-Eval-Encrypt/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2011/04/11/web/ASP-Verify/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/15/web/CSS-shape/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/06/13/web/ASP-Upload-File/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/24/ios/IOS-13x/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2011/04/09/web/ASP-RegEx-Filter-Image/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2015/12/04/web/ASP-Send-Mail-With-Jmail/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2011/04/10/web/ASP-Md5-Encrypt/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-Okhttp/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-byte-String/</loc>
-    
-    <lastmod>2019-11-28</lastmod>
+    <lastmod>2019-11-27</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.pengwf.com/2019/11/26/android/ANDROID-gradle/</loc>
     
-    <lastmod>2019-11-28</lastmod>
+    <lastmod>2019-11-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/11/25/android/ANDROID-Realpath/</loc>
+    
+    <lastmod>2019-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/11/22/web/JS-Auto-Save-Page/</loc>
+    
+    <lastmod>2019-11-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/11/06/web/JS-Hex/</loc>
+    
+    <lastmod>2019-11-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/11/06/web/JS-threejs/</loc>
+    
+    <lastmod>2019-11-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/31/web/CSS-weather/</loc>
+    
+    <lastmod>2019-10-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/25/android/ANDROID-BLE/</loc>
+    
+    <lastmod>2019-10-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/ios/IOS-13x/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-360/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-Everything/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-Fastston-capture/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-FeHelper/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-Meld/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-google-access-helper/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-WinMerge/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-BackService/</loc>
     
-    <lastmod>2019-11-28</lastmod>
+    <lastmod>2019-10-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-Hex-String/</loc>
+    
+    <lastmod>2019-10-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-Okhttp/</loc>
+    
+    <lastmod>2019-10-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-byte-String/</loc>
+    
+    <lastmod>2019-10-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/23/ios/IOS-byte-string/</loc>
+    
+    <lastmod>2019-10-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2019/10/15/web/CSS-shape/</loc>
+    
+    <lastmod>2019-10-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/link/index.html</loc>
+    
+    <lastmod>2018-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/categories/index.html</loc>
+    
+    <lastmod>2018-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/tags/index.html</loc>
+    
+    <lastmod>2018-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/12/09/web/PHP-Change-MySQL-Data-Path/</loc>
+    
+    <lastmod>2015-12-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/12/08/web/PHP-Change-MSSQL-Data-Path/</loc>
+    
+    <lastmod>2015-12-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/12/07/web/PHP-Windows-Nginx-MySQL-PHP/</loc>
+    
+    <lastmod>2015-12-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/12/05/web/PHP-Self-Signed-Certificate-And-Add-To-Nginx/</loc>
+    
+    <lastmod>2015-12-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/12/04/web/ASP-Send-Mail-With-Jmail/</loc>
+    
+    <lastmod>2015-12-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/12/04/web/PHP-Send-Mail-With-PHPMailer/</loc>
+    
+    <lastmod>2015-12-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/10/14/web/PHP-PHPUNIT-Demo/</loc>
+    
+    <lastmod>2015-10-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/07/13/web/ASP-ServerVariables/</loc>
+    
+    <lastmod>2015-07-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/06/14/web/PHP-Deprecated-Function/</loc>
+    
+    <lastmod>2015-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/06/13/web/PHP-CURL-Demo/</loc>
+    
+    <lastmod>2015-06-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2015/06/13/web/ASP-Upload-File/</loc>
+    
+    <lastmod>2015-06-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2014/12/03/web/Js-Eval-Encrypt/</loc>
+    
+    <lastmod>2014-12-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2014/11/23/web/Js-Reload-Opener/</loc>
+    
+    <lastmod>2014-11-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2014/11/22/web/Js-Closure/</loc>
+    
+    <lastmod>2014-11-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2011/04/11/web/ASP-Verify/</loc>
+    
+    <lastmod>2011-04-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2011/04/10/web/ASP-Md5-Encrypt/</loc>
+    
+    <lastmod>2011-04-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2011/04/09/web/ASP-RegEx-Filter-Image/</loc>
+    
+    <lastmod>2011-04-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2011/04/01/web/Js-Dom-Node/</loc>
+    
+    <lastmod>2011-03-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/2011/03/27/web/ASP-Access-Keywords/</loc>
+    
+    <lastmod>2011-03-26</lastmod>
     
   </url>
   
@@ -522,6 +522,13 @@
   </url>
   
   <url>
+    <loc>https://www.pengwf.com/tags/canvas/</loc>
+    <lastmod>2020-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pengwf.com/tags/threejs/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -544,13 +551,6 @@
   
   <url>
     <loc>https://www.pengwf.com/tags/dom/</loc>
-    <lastmod>2020-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/canvas/</loc>
     <lastmod>2020-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
