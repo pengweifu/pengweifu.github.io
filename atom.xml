@@ -36,6 +36,25 @@
   </entry>
   
   <entry>
+    <title>解决canvas在移动端上绘制模糊的问题</title>
+    <link href="https://www.pengwf.com/2020/10/17/web/JS-Mobile-Canvas/"/>
+    <id>https://www.pengwf.com/2020/10/17/web/JS-Mobile-Canvas/</id>
+    <published>2020-10-16T16:00:00.000Z</published>
+    <updated>2020-10-16T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">使用canvas绘制图片或者是文字等东西,在电脑上看大多没有问题,但是放到移动端一看,就会出现模糊的情况</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MariaDB无法登录[ERROR 1698(28000)]</title>
     <link href="https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/"/>
     <id>https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/</id>
@@ -390,25 +409,6 @@
     
     
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS浮点数16进制与10进制之间的转换</title>
-    <link href="https://www.pengwf.com/2019/11/06/web/JS-Hex/"/>
-    <id>https://www.pengwf.com/2019/11/06/web/JS-Hex/</id>
-    <published>2019-11-05T16:00:00.000Z</published>
-    <updated>2019-11-05T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">JS浮点数16进制与10进制之间的转换</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="hex" scheme="https://www.pengwf.com/tags/hex/"/>
     
   </entry>
   
