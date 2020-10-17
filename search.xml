@@ -54,6 +54,31 @@
     
     
     <entry>
+      <title>时间字符串格式问题在iPhone导致的显示异常</title>
+      <link href="2020/10/17/web/JS-iOS-Date/"/>
+      <url>2020/10/17/web/JS-iOS-Date/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="时间字符串格式问题在iPhone导致的显示异常"><a href="#时间字符串格式问题在iPhone导致的显示异常" class="headerlink" title="时间字符串格式问题在iPhone导致的显示异常"></a>时间字符串格式问题在iPhone导致的显示异常</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>常见的时间格式<code>2020-10-17 21:55:00</code>在PC和安卓上经过<code>new Date()</code>转化以后能正常返回Date,在iOS上却提示Invalid Date</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>将<code>2020-10-17 21:55:00</code>替换为<code>2020/10/17 21:55:00</code></p><p><img src="/images/js-ios-date/1.jpg" alt="打印日志"></p><p><img src="/images/js-ios-date/2.jpg" alt="Invalid Date"></p><p><img src="/images/js-ios-date/3.jpg" alt="将-替换为/后正常"></p><p><img src="/images/js-ios-date/4.jpg" alt="安利一下iOS下的iHTTP浏览器"></p><p><img src="/images/js-ios-date/5.jpg" alt="方便的开发调试工具箱"></p><p><img src="/images/js-ios-date/6.jpg" alt="可以自建一些脚本,拓展工具"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> exception </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MariaDB无法登录[ERROR 1698(28000)]</title>
       <link href="2020/10/16/web/MYSQL-CANNOT-LOGIN/"/>
       <url>2020/10/16/web/MYSQL-CANNOT-LOGIN/</url>

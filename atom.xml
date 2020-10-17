@@ -55,6 +55,25 @@
   </entry>
   
   <entry>
+    <title>时间字符串格式问题在iPhone导致的显示异常</title>
+    <link href="https://www.pengwf.com/2020/10/17/web/JS-iOS-Date/"/>
+    <id>https://www.pengwf.com/2020/10/17/web/JS-iOS-Date/</id>
+    <published>2020-10-16T16:00:00.000Z</published>
+    <updated>2020-10-16T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">常见的时间格式2020-10-17 21:55:00在PC和安卓上经过new Date()转化以后能正常返回Date,在iOS上却提示Invalid Date</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MariaDB无法登录[ERROR 1698(28000)]</title>
     <link href="https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/"/>
     <id>https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/</id>
@@ -390,25 +409,6 @@
     
     
     <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>定时截图并发送到邮箱</title>
-    <link href="https://www.pengwf.com/2019/11/22/web/JS-Auto-Save-Page/"/>
-    <id>https://www.pengwf.com/2019/11/22/web/JS-Auto-Save-Page/</id>
-    <published>2019-11-21T16:00:00.000Z</published>
-    <updated>2019-11-21T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">定时截图并发送到邮箱</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
     
   </entry>
   
