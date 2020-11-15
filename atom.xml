@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2020-11-02T16:00:00.000Z</updated>
+  <updated>2020-11-14T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue.js 接入OAuth2</title>
+    <link href="https://www.pengwf.com/2020/11/15/web/JS-vue-Oauth2/"/>
+    <id>https://www.pengwf.com/2020/11/15/web/JS-vue-Oauth2/</id>
+    <published>2020-11-14T16:00:00.000Z</published>
+    <updated>2020-11-14T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">Vue项目怎么接入OAuth2.0</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="Oauth2" scheme="https://www.pengwf.com/tags/Oauth2/"/>
+    
+    <category term="API" scheme="https://www.pengwf.com/tags/API/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Charles抓包手机的https请求</title>
@@ -387,25 +408,6 @@
     
     
     <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在gradle中设置打包秘钥及输出apk名称</title>
-    <link href="https://www.pengwf.com/2019/11/26/android/ANDROID-gradle/"/>
-    <id>https://www.pengwf.com/2019/11/26/android/ANDROID-gradle/</id>
-    <published>2019-11-25T16:00:00.000Z</published>
-    <updated>2019-11-25T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">在gradle中设置打包秘钥及输出apk名称</summary>
-    
-    
-    
-    <category term="Android" scheme="https://www.pengwf.com/categories/Android/"/>
     
     
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
