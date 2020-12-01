@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2020-11-29T16:00:00.000Z</updated>
+  <updated>2020-11-30T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 verdaccio 搭建私有npm镜像</title>
+    <link href="https://www.pengwf.com/2020/12/01/other/TOOL-verdaccio/"/>
+    <id>https://www.pengwf.com/2020/12/01/other/TOOL-verdaccio/</id>
+    <published>2020-11-30T16:00:00.000Z</published>
+    <updated>2020-11-30T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">Verdaccio 开箱即用，拥有自己的小型数据库，能够代理其它npm镜像（例如 npmjs.org），缓存下载的模块。此外 Verdaccio 还易于扩展存储功能，它支持各种社区制作的插件，以连接到亚马逊的 s3、谷歌云存储等服务或创建自己的插件。</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
+    
+    <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue Cli 搭建PWA项目</title>
@@ -388,29 +409,6 @@
     
     
     <category term="BLE" scheme="https://www.pengwf.com/tags/BLE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript CRC16校验</title>
-    <link href="https://www.pengwf.com/2019/12/10/web/JS-CRC/"/>
-    <id>https://www.pengwf.com/2019/12/10/web/JS-CRC/</id>
-    <published>2019-12-09T16:00:00.000Z</published>
-    <updated>2019-12-09T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">Javascript CRC16校验</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="crc" scheme="https://www.pengwf.com/tags/crc/"/>
-    
-    <category term="byte" scheme="https://www.pengwf.com/tags/byte/"/>
-    
-    <category term="hex" scheme="https://www.pengwf.com/tags/hex/"/>
     
   </entry>
   
