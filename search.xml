@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>监控浏览器打开开发者工具事件</title>
+      <link href="2021/07/09/web/JS-Console-Watch/"/>
+      <url>2021/07/09/web/JS-Console-Watch/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="监控浏览器打开开发者工具事件"><a href="#监控浏览器打开开发者工具事件" class="headerlink" title="监控浏览器打开开发者工具事件"></a>监控浏览器打开开发者工具事件</h2><p>在某些情况下我们需要检测当前用户是否打开了浏览器开发者工具，比如前端爬虫检测，如果检测到用户打开了控制台就认为是潜在的爬虫用户，再通过其它策略对其进行处理。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;test&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    const element &#x3D; new Error(&#39;test&#39;);</span><br><span class="line">    Object.defineProperty(element, &#39;stack&#39;, &#123;</span><br><span class="line">        get: function() &#123;</span><br><span class="line">            document.getElementsByTagName(&#39;head&#39;)[0].innerHTML &#x3D; &#39;&#39;;</span><br><span class="line">            document.body.innerHTML &#x3D; &#39;&#39;;</span><br><span class="line">            return &#39;index.html:18&#39;;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">    console.dir(element);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> console </tag>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用 verdaccio 搭建私有npm镜像(续)</title>
       <link href="2021/05/25/other/TOOL-verdaccio1/"/>
       <url>2021/05/25/other/TOOL-verdaccio1/</url>

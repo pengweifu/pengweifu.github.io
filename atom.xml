@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2021-05-24T16:00:00.000Z</updated>
+  <updated>2021-07-08T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>监控浏览器打开开发者工具事件</title>
+    <link href="https://www.pengwf.com/2021/07/09/web/JS-Console-Watch/"/>
+    <id>https://www.pengwf.com/2021/07/09/web/JS-Console-Watch/</id>
+    <published>2021-07-08T16:00:00.000Z</published>
+    <updated>2021-07-08T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">在某些情况下我们需要检测当前用户是否打开了浏览器开发者工具，比如前端爬虫检测，如果检测到用户打开了控制台就认为是潜在的爬虫用户，再通过其它策略对其进行处理。</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="console" scheme="https://www.pengwf.com/tags/console/"/>
+    
+    <category term="js" scheme="https://www.pengwf.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 verdaccio 搭建私有npm镜像(续)</title>
@@ -384,29 +405,6 @@
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
     
     <category term="canvas" scheme="https://www.pengwf.com/tags/canvas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android CRC16校验</title>
-    <link href="https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/"/>
-    <id>https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/</id>
-    <published>2019-12-10T16:00:00.000Z</published>
-    <updated>2019-12-10T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">Android CRC16校验</summary>
-    
-    
-    
-    <category term="Android" scheme="https://www.pengwf.com/categories/Android/"/>
-    
-    
-    <category term="crc" scheme="https://www.pengwf.com/tags/crc/"/>
-    
-    <category term="byte" scheme="https://www.pengwf.com/tags/byte/"/>
-    
-    <category term="hex" scheme="https://www.pengwf.com/tags/hex/"/>
     
   </entry>
   
