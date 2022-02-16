@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>APP审核被拒,使用了私有API(Guideline 2.5.1)</title>
+      <link href="/2022/02/16/ios/IOS-private-api/"/>
+      <url>/2022/02/16/ios/IOS-private-api/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="APP审核被拒-使用了私有API"><a href="#APP审核被拒-使用了私有API" class="headerlink" title="APP审核被拒,使用了私有API"></a>APP审核被拒,使用了私有API</h2><h3 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h3><p>收到邮件,提示使用了私有API</p><blockquote><p>Your app uses or references the following non-public APIs:<br>com.apple.springboard.lockcomplete<br>The use of non-public APIs is not permitted on the App Store because it can lead to a poor user experience should these APIs change.<br>Continuing to use or conceal non-public APIs in future submissions of this app may result in the termination of your Apple Developer account, as well as removal of all associated apps from the App Store.</p></blockquote><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>如果不确定是哪个第三方使用了私有API,那就先搜索下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd xxx/project</span><br><span class="line">grep -R &#x27;com.apple.springboard.lockcomplete&#x27; *</span><br></pre></td></tr></table></figure><p>找到对应文件后删除</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> iOS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> skill </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用CSS切换横竖屏显示</title>
       <link href="/2021/11/01/web/CSS-rotate/"/>
       <url>/2021/11/01/web/CSS-rotate/</url>

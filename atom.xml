@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2021-10-31T16:00:00.000Z</updated>
+  <updated>2022-02-15T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>APP审核被拒,使用了私有API(Guideline 2.5.1)</title>
+    <link href="https://www.pengwf.com/2022/02/16/ios/IOS-private-api/"/>
+    <id>https://www.pengwf.com/2022/02/16/ios/IOS-private-api/</id>
+    <published>2022-02-15T16:00:00.000Z</published>
+    <updated>2022-02-15T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">APP审核被拒,使用了私有API</summary>
+    
+    
+    
+    <category term="iOS" scheme="https://www.pengwf.com/categories/iOS/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
   
   <entry>
     <title>用CSS切换横竖屏显示</title>
@@ -382,27 +401,6 @@
     
     
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Laravel+Passport构建API系统</title>
-    <link href="https://www.pengwf.com/2019/12/25/web/PHP-Laravel/"/>
-    <id>https://www.pengwf.com/2019/12/25/web/PHP-Laravel/</id>
-    <published>2019-12-24T16:00:00.000Z</published>
-    <updated>2019-12-24T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">Laravel+Passport构建API系统</summary>
-    
-    
-    
-    <category term="PHP" scheme="https://www.pengwf.com/categories/PHP/"/>
-    
-    
-    <category term="Oauth2" scheme="https://www.pengwf.com/tags/Oauth2/"/>
-    
-    <category term="API" scheme="https://www.pengwf.com/tags/API/"/>
     
   </entry>
   
