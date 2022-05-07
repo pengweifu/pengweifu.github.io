@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>解决Xcode真机调试不兼容高版本iOS问题</title>
+      <link href="/2022/05/07/ios/IOS-xcode-compatible/"/>
+      <url>/2022/05/07/ios/IOS-xcode-compatible/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="解决Xcode真机调试不兼容高版本iOS问题"><a href="#解决Xcode真机调试不兼容高版本iOS问题" class="headerlink" title="解决Xcode真机调试不兼容高版本iOS问题"></a>解决Xcode真机调试不兼容高版本iOS问题</h2><ol><li>从<a href="https://gitee.com/mirrors_filsv/iPhoneOSDeviceSupport">Gitee</a>下载手机系统对应版本的兼容包;</li><li>解压下载的压缩包;</li><li>关闭Xcode;</li><li>依次进入以下文件夹: <code>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/</code>;</li><li>将解压的文件夹移动到该目录;</li><li>重新打开Xcode.</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> iOS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Xcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>APP审核被拒,使用了私有API(Guideline 2.5.1)</title>
       <link href="/2022/02/16/ios/IOS-private-api/"/>
       <url>/2022/02/16/ios/IOS-private-api/</url>
