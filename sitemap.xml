@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/</loc>
+    <loc>https://www.pengwf.com/2019/12/11/ios/IOS-CRC/</loc>
     
     <lastmod>2019-12-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2019/12/11/ios/IOS-CRC/</loc>
+    <loc>https://www.pengwf.com/2019/12/11/android/ANDROID-CRC/</loc>
     
     <lastmod>2019-12-10</lastmod>
     
@@ -310,6 +310,13 @@
   </url>
   
   <url>
+    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-WinMerge/</loc>
+    
+    <lastmod>2019-10-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.pengwf.com/2019/10/24/other/TOOL-google-access-helper/</loc>
     
     <lastmod>2019-10-23</lastmod>
@@ -317,9 +324,9 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/2019/10/24/other/TOOL-WinMerge/</loc>
+    <loc>https://www.pengwf.com/2019/10/23/ios/IOS-byte-string/</loc>
     
-    <lastmod>2019-10-23</lastmod>
+    <lastmod>2019-10-22</lastmod>
     
   </url>
   
@@ -346,13 +353,6 @@
   
   <url>
     <loc>https://www.pengwf.com/2019/10/23/android/ANDROID-byte-String/</loc>
-    
-    <lastmod>2019-10-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/2019/10/23/ios/IOS-byte-string/</loc>
     
     <lastmod>2019-10-22</lastmod>
     
@@ -529,7 +529,7 @@
 
   
   <url>
-    <loc>https://www.pengwf.com/tags/service/</loc>
+    <loc>https://www.pengwf.com/tags/skill/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -557,6 +557,20 @@
   </url>
   
   <url>
+    <loc>https://www.pengwf.com/tags/Xcode/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/tags/service/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pengwf.com/tags/request/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
@@ -565,13 +579,6 @@
   
   <url>
     <loc>https://www.pengwf.com/tags/exception/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/skill/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -613,7 +620,35 @@
   </url>
   
   <url>
+    <loc>https://www.pengwf.com/tags/console/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/tags/js/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.pengwf.com/tags/canvas/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/tags/Oauth2/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.pengwf.com/tags/API/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -669,20 +704,6 @@
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/tags/Oauth2/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/API/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.pengwf.com/tags/Test/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
@@ -710,38 +731,17 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://www.pengwf.com/tags/console/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/js/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.pengwf.com/tags/Xcode/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://www.pengwf.com/categories/Android/</loc>
+    <loc>https://www.pengwf.com/categories/iOS/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.pengwf.com/categories/iOS/</loc>
+    <loc>https://www.pengwf.com/categories/Android/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
