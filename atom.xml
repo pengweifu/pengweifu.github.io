@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2022-05-06T16:00:00.000Z</updated>
+  <updated>2022-05-14T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vite2.x + Vue.js3.x + TS起步</title>
+    <link href="https://www.pengwf.com/2022/05/15/web/JS-Vite/"/>
+    <id>https://www.pengwf.com/2022/05/15/web/JS-Vite/</id>
+    <published>2022-05-14T16:00:00.000Z</published>
+    <updated>2022-05-14T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">Vue.js3.x全家桶初始化</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="vite" scheme="https://www.pengwf.com/tags/vite/"/>
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+    <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
+    
+  </entry>
   
   <entry>
     <title>解决Xcode真机调试不兼容高版本iOS问题</title>
@@ -382,25 +405,6 @@
     
     
     <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Electron将网页打包成桌面应用程序</title>
-    <link href="https://www.pengwf.com/2020/04/22/other/TOOL-Electron/"/>
-    <id>https://www.pengwf.com/2020/04/22/other/TOOL-Electron/</id>
-    <published>2020-04-21T16:00:00.000Z</published>
-    <updated>2020-04-21T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">Electron 是一个使用 JavaScript, HTML 和 CSS 等 Web 技术创建原生程序的框架,它负责比较难搞的部分,你只需把精力放在你的应用的核心上即可。</summary>
-    
-    
-    
-    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
     
   </entry>
   
