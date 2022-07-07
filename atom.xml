@@ -17,25 +17,6 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用nodejs编写cli(命令行)</title>
-    <link href="https://www.pengwf.com/2022/07/07/web/JS-npm-cli/"/>
-    <id>https://www.pengwf.com/2022/07/07/web/JS-npm-cli/</id>
-    <published>2022-07-06T16:00:00.000Z</published>
-    <updated>2022-07-06T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">使用nodejs编写cli(命令行),从git仓库拉取模板生成不同框架的项目</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
     <title>在电脑上下载Google Play上的APP安装包</title>
     <link href="https://www.pengwf.com/2022/07/07/other/apk-download/"/>
     <id>https://www.pengwf.com/2022/07/07/other/apk-download/</id>
@@ -48,6 +29,25 @@
     
     
     <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用nodejs编写cli(命令行)</title>
+    <link href="https://www.pengwf.com/2022/07/07/web/JS-npm-cli/"/>
+    <id>https://www.pengwf.com/2022/07/07/web/JS-npm-cli/</id>
+    <published>2022-07-06T16:00:00.000Z</published>
+    <updated>2022-07-06T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">使用nodejs编写cli(命令行),从git仓库拉取模板生成不同框架的项目</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
@@ -90,9 +90,9 @@
     
     <category term="vite" scheme="https://www.pengwf.com/tags/vite/"/>
     
-    <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
-    
     <category term="react" scheme="https://www.pengwf.com/tags/react/"/>
+    
+    <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
     
   </entry>
   
@@ -113,9 +113,9 @@
     
     <category term="vite" scheme="https://www.pengwf.com/tags/vite/"/>
     
-    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
-    
     <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
     
   </entry>
   
@@ -158,25 +158,6 @@
   </entry>
   
   <entry>
-    <title>用CSS切换横竖屏显示</title>
-    <link href="https://www.pengwf.com/2021/11/01/web/CSS-rotate/"/>
-    <id>https://www.pengwf.com/2021/11/01/web/CSS-rotate/</id>
-    <published>2021-10-31T16:00:00.000Z</published>
-    <updated>2021-10-31T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">用CSS切换横竖屏显示</summary>
-    
-    
-    
-    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
     <title>解决macOS升级导致git命令报错</title>
     <link href="https://www.pengwf.com/2021/11/01/other/macOS-xcrun/"/>
     <id>https://www.pengwf.com/2021/11/01/other/macOS-xcrun/</id>
@@ -192,6 +173,25 @@
     
     
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用CSS切换横竖屏显示</title>
+    <link href="https://www.pengwf.com/2021/11/01/web/CSS-rotate/"/>
+    <id>https://www.pengwf.com/2021/11/01/web/CSS-rotate/</id>
+    <published>2021-10-31T16:00:00.000Z</published>
+    <updated>2021-10-31T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">用CSS切换横竖屏显示</summary>
+    
+    
+    
+    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
     
   </entry>
   
@@ -231,9 +231,9 @@
     <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
-    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
-    
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
     
   </entry>
   
@@ -271,9 +271,9 @@
     <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
-    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
-    
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
     
   </entry>
   
