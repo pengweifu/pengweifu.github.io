@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2022-06-15T16:00:00.000Z</updated>
+  <updated>2022-09-07T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决macOS下VS Code启动时报错的问题</title>
+    <link href="https://www.pengwf.com/2022/09/08/other/macOS-VSCode-Error/"/>
+    <id>https://www.pengwf.com/2022/09/08/other/macOS-VSCode-Error/</id>
+    <published>2022-09-07T16:00:00.000Z</published>
+    <updated>2022-09-07T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">解决macOS下VS Code启动时报`Unable to resolve your shell environment in a reasonable time. Please review your shell configuration.`的问题</summary>
+    
+    
+    
+    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用nodejs编写cli(命令行)</title>
+    <link href="https://www.pengwf.com/2022/07/07/web/JS-npm-cli/"/>
+    <id>https://www.pengwf.com/2022/07/07/web/JS-npm-cli/</id>
+    <published>2022-07-06T16:00:00.000Z</published>
+    <updated>2022-07-06T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">使用nodejs编写cli(命令行),从git仓库拉取模板生成不同框架的项目</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在电脑上下载Google Play上的APP安装包</title>
+    <link href="https://www.pengwf.com/2022/07/07/other/apk-download/"/>
+    <id>https://www.pengwf.com/2022/07/07/other/apk-download/</id>
+    <published>2022-07-06T16:00:00.000Z</published>
+    <updated>2022-07-06T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">在电脑上下载Google Play上的APP安装包</summary>
+    
+    
+    
+    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
   
   <entry>
     <title>MacOS下部分App多语言切换</title>
@@ -352,63 +409,6 @@
     
     
     <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MariaDB无法登录[ERROR 1698(28000)]</title>
-    <link href="https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/"/>
-    <id>https://www.pengwf.com/2020/10/16/web/MYSQL-CANNOT-LOGIN/</id>
-    <published>2020-10-15T16:00:00.000Z</published>
-    <updated>2020-10-15T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">新安装的MariaDB用mysql -u root -p无法登录,只能用sudo mysql -u root登录</summary>
-    
-    
-    
-    <category term="PHP" scheme="https://www.pengwf.com/categories/PHP/"/>
-    
-    
-    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>web全栈工程师在Mac下的开发环境搭建</title>
-    <link href="https://www.pengwf.com/2020/09/28/other/TOOL-Mac/"/>
-    <id>https://www.pengwf.com/2020/09/28/other/TOOL-Mac/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-27T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">web全栈工程师在Mac下的开发环境搭建</summary>
-    
-    
-    
-    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SourceTree</title>
-    <link href="https://www.pengwf.com/2020/05/15/other/TOOL-sourcetree/"/>
-    <id>https://www.pengwf.com/2020/05/15/other/TOOL-sourcetree/</id>
-    <published>2020-05-14T16:00:00.000Z</published>
-    <updated>2020-05-14T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">SourceTree</summary>
-    
-    
-    
-    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
     
   </entry>
   
