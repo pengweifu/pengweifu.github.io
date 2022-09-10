@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2022-09-07T16:00:00.000Z</updated>
+  <updated>2022-09-09T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>uniapp踩坑心得</title>
+    <link href="https://www.pengwf.com/2022/09/10/web/JS-Uniapp/"/>
+    <id>https://www.pengwf.com/2022/09/10/web/JS-Uniapp/</id>
+    <published>2022-09-09T16:00:00.000Z</published>
+    <updated>2022-09-09T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">cli构建uniapp项目踩坑心得</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>解决macOS下VS Code启动时报错的问题</title>
@@ -383,25 +402,6 @@
     
     
     <summary type="html">使用canvas绘制图片或者是文字等东西,在电脑上看大多没有问题,但是放到移动端一看,就会出现模糊的情况</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时间字符串格式问题在iPhone导致的显示异常</title>
-    <link href="https://www.pengwf.com/2020/10/17/web/JS-iOS-Date/"/>
-    <id>https://www.pengwf.com/2020/10/17/web/JS-iOS-Date/</id>
-    <published>2020-10-16T16:00:00.000Z</published>
-    <updated>2020-10-16T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">常见的时间格式2020-10-17 21:55:00在PC和安卓上经过new Date()转化以后能正常返回Date,在iOS上却提示Invalid Date</summary>
     
     
     
