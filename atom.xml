@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2022-09-09T16:00:00.000Z</updated>
+  <updated>2023-01-01T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>uniapp管理APP更新</title>
+    <link href="https://www.pengwf.com/2023/01/02/web/JS-Uniapp-Upgrade/"/>
+    <id>https://www.pengwf.com/2023/01/02/web/JS-Uniapp-Upgrade/</id>
+    <published>2023-01-01T16:00:00.000Z</published>
+    <updated>2023-01-01T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">uniapp管理APP更新</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>uniapp管理APP缓存</title>
+    <link href="https://www.pengwf.com/2023/01/02/web/JS-Uniapp-ClearCache/"/>
+    <id>https://www.pengwf.com/2023/01/02/web/JS-Uniapp-ClearCache/</id>
+    <published>2023-01-01T16:00:00.000Z</published>
+    <updated>2023-01-01T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">uniapp获取APP缓存/清除APP缓存</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>uniapp踩坑心得</title>
@@ -371,44 +409,6 @@
     
     
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决Hexo看板娘引起的页面重渲染</title>
-    <link href="https://www.pengwf.com/2020/10/17/web/JS-Hexo-live2d/"/>
-    <id>https://www.pengwf.com/2020/10/17/web/JS-Hexo-live2d/</id>
-    <published>2020-10-16T16:00:00.000Z</published>
-    <updated>2020-10-16T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">使用hexo-helper-live2d后,页面会在加载看板娘时重渲染,网页会有一段时间整个布局都是错乱的</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决canvas在移动端上绘制模糊的问题</title>
-    <link href="https://www.pengwf.com/2020/10/17/web/JS-Mobile-Canvas/"/>
-    <id>https://www.pengwf.com/2020/10/17/web/JS-Mobile-Canvas/</id>
-    <published>2020-10-16T16:00:00.000Z</published>
-    <updated>2020-10-16T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">使用canvas绘制图片或者是文字等东西,在电脑上看大多没有问题,但是放到移动端一看,就会出现模糊的情况</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="exception" scheme="https://www.pengwf.com/tags/exception/"/>
     
   </entry>
   
