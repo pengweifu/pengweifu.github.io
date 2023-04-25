@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2023-01-01T16:00:00.000Z</updated>
+  <updated>2023-04-16T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -17,21 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>uniapp管理APP更新</title>
-    <link href="https://www.pengwf.com/2023/01/02/web/JS-Uniapp-Upgrade/"/>
-    <id>https://www.pengwf.com/2023/01/02/web/JS-Uniapp-Upgrade/</id>
-    <published>2023-01-01T16:00:00.000Z</published>
-    <updated>2023-01-01T16:00:00.000Z</updated>
+    <title>Javascript 录制麦克风声音</title>
+    <link href="https://www.pengwf.com/2023/04/17/web/JS-Recorder/"/>
+    <id>https://www.pengwf.com/2023/04/17/web/JS-Recorder/</id>
+    <published>2023-04-16T16:00:00.000Z</published>
+    <updated>2023-04-16T16:00:00.000Z</updated>
     
     
-    <summary type="html">uniapp管理APP更新</summary>
+    <summary type="html">Javascript 录制麦克风声音</summary>
     
     
     
     <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
-    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    <category term="audio" scheme="https://www.pengwf.com/tags/audio/"/>
     
   </entry>
   
@@ -44,6 +44,25 @@
     
     
     <summary type="html">uniapp获取APP缓存/清除APP缓存</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>uniapp管理APP更新</title>
+    <link href="https://www.pengwf.com/2023/01/02/web/JS-Uniapp-Upgrade/"/>
+    <id>https://www.pengwf.com/2023/01/02/web/JS-Uniapp-Upgrade/</id>
+    <published>2023-01-01T16:00:00.000Z</published>
+    <updated>2023-01-01T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">uniapp管理APP更新</summary>
     
     
     
@@ -93,25 +112,6 @@
   </entry>
   
   <entry>
-    <title>使用nodejs编写cli(命令行)</title>
-    <link href="https://www.pengwf.com/2022/07/07/web/JS-npm-cli/"/>
-    <id>https://www.pengwf.com/2022/07/07/web/JS-npm-cli/</id>
-    <published>2022-07-06T16:00:00.000Z</published>
-    <updated>2022-07-06T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">使用nodejs编写cli(命令行),从git仓库拉取模板生成不同框架的项目</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
     <title>在电脑上下载Google Play上的APP安装包</title>
     <link href="https://www.pengwf.com/2022/07/07/other/apk-download/"/>
     <id>https://www.pengwf.com/2022/07/07/other/apk-download/</id>
@@ -124,6 +124,25 @@
     
     
     <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用nodejs编写cli(命令行)</title>
+    <link href="https://www.pengwf.com/2022/07/07/web/JS-npm-cli/"/>
+    <id>https://www.pengwf.com/2022/07/07/web/JS-npm-cli/</id>
+    <published>2022-07-06T16:00:00.000Z</published>
+    <updated>2022-07-06T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">使用nodejs编写cli(命令行),从git仓库拉取模板生成不同框架的项目</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
@@ -187,9 +206,9 @@
     <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
-    <category term="vite" scheme="https://www.pengwf.com/tags/vite/"/>
-    
     <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+    <category term="vite" scheme="https://www.pengwf.com/tags/vite/"/>
     
     <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
     
@@ -234,25 +253,6 @@
   </entry>
   
   <entry>
-    <title>用CSS切换横竖屏显示</title>
-    <link href="https://www.pengwf.com/2021/11/01/web/CSS-rotate/"/>
-    <id>https://www.pengwf.com/2021/11/01/web/CSS-rotate/</id>
-    <published>2021-10-31T16:00:00.000Z</published>
-    <updated>2021-10-31T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">用CSS切换横竖屏显示</summary>
-    
-    
-    
-    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
     <title>解决macOS升级导致git命令报错</title>
     <link href="https://www.pengwf.com/2021/11/01/other/macOS-xcrun/"/>
     <id>https://www.pengwf.com/2021/11/01/other/macOS-xcrun/</id>
@@ -268,6 +268,25 @@
     
     
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用CSS切换横竖屏显示</title>
+    <link href="https://www.pengwf.com/2021/11/01/web/CSS-rotate/"/>
+    <id>https://www.pengwf.com/2021/11/01/web/CSS-rotate/</id>
+    <published>2021-10-31T16:00:00.000Z</published>
+    <updated>2021-10-31T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">用CSS切换横竖屏显示</summary>
+    
+    
+    
+    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
     
   </entry>
   
@@ -307,9 +326,9 @@
     <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
-    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
-    
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
     
   </entry>
   
@@ -347,9 +366,9 @@
     <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
     
     
-    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
-    
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
     
   </entry>
   
@@ -390,25 +409,6 @@
     <category term="Oauth2" scheme="https://www.pengwf.com/tags/Oauth2/"/>
     
     <category term="API" scheme="https://www.pengwf.com/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Charles抓包手机的https请求</title>
-    <link href="https://www.pengwf.com/2020/11/03/other/TOOL-Charles/"/>
-    <id>https://www.pengwf.com/2020/11/03/other/TOOL-Charles/</id>
-    <published>2020-11-02T16:00:00.000Z</published>
-    <updated>2020-11-02T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">在PC端可以比较方便地通过Chrome浏览器的开发者工具查看网页请求数据,到了手机端,特别是一些混合APP里面,网页的请求数据就不太容易看到,这个时候就需要借助Charles或者Fiddler等抓包工具来查看了.</summary>
-    
-    
-    
-    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
     
   </entry>
   
