@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ElementUI设置Table的行间距</title>
+      <link href="/2024/02/26/web/JS-ElementUI-Table/"/>
+      <url>/2024/02/26/web/JS-ElementUI-Table/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="ElementUI-设置-Table-的行间距"><a href="#ElementUI-设置-Table-的行间距" class="headerlink" title="ElementUI 设置 Table 的行间距"></a>ElementUI 设置 Table 的行间距</h2><p>ElementUI 的 Table 组件默认的是行与行挨着，需要更改组件的样式</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">::v-deep .el-table &#123;</span><br><span class="line">  &amp;::before &#123;</span><br><span class="line">    height: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.el-table__body</span> &#123;</span><br><span class="line">    //-webkit-<span class="attribute">border</span>-horizontal-spacing: <span class="number">13px</span>;  // 水平间距</span><br><span class="line">    -webkit-<span class="attribute">border</span>-vertical-spacing: <span class="number">13px</span>; // 垂直间距</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><script src="https://unpkg.com/vue@2.7.16/dist/vue.js"></script><link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"><script src="https://unpkg.com/element-ui/lib/index.js"></script><style>.table-wrap {  margin: 0;  overflow: hidden;}.el-table::before {  height: 0;}.el-table .el-table__body {  -webkit-border-vertical-spacing: 13px;}.el-table .warning-row {  background: oldlace;}.el-table .success-row {  background: #f0f9eb;}.el-table table th, .el-table table td {  border-left: 0;}.el-table table th:first-child, .el-table table td:first-child {  border-left: 1px solid var(--light-grey);}</style><div id="app">  <el-table :data="tableData" :row-class-name="tableRowClassName">    <el-table-column prop="date" label="日期" width="180"></el-table-column>    <el-table-column prop="name" label="姓名" width="180"></el-table-column>    <el-table-column prop="address" label="地址"></el-table-column>  </el-table></div><script type="text/javascript">  var app = new Vue({  el: '#app',  data: {    tableData: [{      date: '2016-05-02',      name: '王小虎',      address: '上海市普陀区金沙江路 1518 弄'    }, {      date: '2016-05-04',      name: '王小虎',      address: '上海市普陀区金沙江路 1517 弄'    }, {      date: '2016-05-01',      name: '王小虎',      address: '上海市普陀区金沙江路 1519 弄'    }, {      date: '2016-05-03',      name: '王小虎',      address: '上海市普陀区金沙江路 1516 弄'    }]  },  methods: {    tableRowClassName({row, rowIndex}) {      return rowIndex % 2 === 0 ? 'warning-row' : 'success-row'    }  },})</script>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Javascript 生成word文档</title>
       <link href="/2023/10/30/web/JS-word/"/>
       <url>/2023/10/30/web/JS-word/</url>
