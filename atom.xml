@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2024-02-25T16:00:00.000Z</updated>
+  <updated>2024-11-21T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS绘制信封形状的几种写法</title>
+    <link href="https://www.pengwf.com/2024/11/22/web/CSS-Card/"/>
+    <id>https://www.pengwf.com/2024/11/22/web/CSS-Card/</id>
+    <published>2024-11-21T16:00:00.000Z</published>
+    <updated>2024-11-21T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">CSS绘制信封形状的几种写法</summary>
+    
+    
+    
+    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP实时推送功能</title>
+    <link href="https://www.pengwf.com/2024/11/16/web/PHP-SSE/"/>
+    <id>https://www.pengwf.com/2024/11/16/web/PHP-SSE/</id>
+    <published>2024-11-15T16:00:00.000Z</published>
+    <updated>2024-11-15T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">PHP主动推送数据到客户端</summary>
+    
+    
+    
+    <category term="PHP" scheme="https://www.pengwf.com/categories/PHP/"/>
+    
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
+    
+  </entry>
   
   <entry>
     <title>ElementUI设置Table的行间距</title>
@@ -359,46 +397,6 @@
     <id>https://www.pengwf.com/2021/05/25/other/TOOL-verdaccio1/</id>
     <published>2021-05-24T16:00:00.000Z</published>
     <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">Verdaccio 开箱即用，拥有自己的小型数据库，能够代理其它npm镜像（例如 npmjs.org），缓存下载的模块。此外 Verdaccio 还易于扩展存储功能，它支持各种社区制作的插件，以连接到亚马逊的 s3、谷歌云存储等服务或创建自己的插件。</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
-    
-    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Canvas拖尾效果的实现</title>
-    <link href="https://www.pengwf.com/2020/12/08/web/JS-canvas-tail/"/>
-    <id>https://www.pengwf.com/2020/12/08/web/JS-canvas-tail/</id>
-    <published>2020-12-07T16:00:00.000Z</published>
-    <updated>2020-12-07T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">经常看到canvas的一些拖尾效果(如彗星，烟花等),看了下别人的demo发现原来实现很简单</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 verdaccio 搭建私有npm镜像</title>
-    <link href="https://www.pengwf.com/2020/12/01/other/TOOL-verdaccio/"/>
-    <id>https://www.pengwf.com/2020/12/01/other/TOOL-verdaccio/</id>
-    <published>2020-11-30T16:00:00.000Z</published>
-    <updated>2020-11-30T16:00:00.000Z</updated>
     
     
     <summary type="html">Verdaccio 开箱即用，拥有自己的小型数据库，能够代理其它npm镜像（例如 npmjs.org），缓存下载的模块。此外 Verdaccio 还易于扩展存储功能，它支持各种社区制作的插件，以连接到亚马逊的 s3、谷歌云存储等服务或创建自己的插件。</summary>
