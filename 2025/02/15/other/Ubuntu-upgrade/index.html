@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ubuntu 18升级到22 | 麦子的博客</title><meta name="keywords" content="tools"><meta name="author" content="pengweifu"><meta name="copyright" content="pengweifu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="Ubuntu 18升级到22">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu 18升级到22">
+<meta property="og:url" content="https://www.pengwf.com/2025/02/15/other/Ubuntu-upgrade/index.html">
+<meta property="og:site_name" content="麦子的博客">
+<meta property="og:description" content="Ubuntu 18升级到22">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.pengwf.com/images/mac/10.png">
+<meta property="article:published_time" content="2025-02-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-02-14T16:00:00.000Z">
+<meta property="article:author" content="pengweifu">
+<meta property="article:tag" content="skill">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.pengwf.com/images/mac/10.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.pengwf.com/2025/02/15/other/Ubuntu-upgrade/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c52098f04c07f714298c1f4c0fabd5bc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.4.0',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2025-02-15 00:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="麦子的博客" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/images/face.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">86</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">37</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 更多</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/Demos/bs/"><i class="fa-fw fa fa-chevron-right"></i><span> BootStrap</span></a></li><li><a class="site-page" href="/Demos/artdialog/"><i class="fa-fw fa fa-chevron-right"></i><span> Artdialog</span></a></li><li><a class="site-page" href="/Demos/haoanju/"><i class="fa-fw fa fa-chevron-right"></i><span> haoanju</span></a></li><li><a class="site-page" href="/Demos/threejs/"><i class="fa-fw fa fa-chevron-right"></i><span> threejs</span></a></li><li><a class="site-page" href="/Demos/canvas/"><i class="fa-fw fa fa-chevron-right"></i><span> canvas</span></a></li><li><a class="site-page" href="/Demos/cube/"><i class="fa-fw fa fa-chevron-right"></i><span> cube</span></a></li><li><a class="site-page" href="/Demos/vuejs/"><i class="fa-fw fa fa-chevron-right"></i><span> vuejs</span></a></li><li><a class="site-page" href="/Demos/rose.html"><i class="fa-fw fa fa-chevron-right"></i><span> rose</span></a></li><li><a class="site-page" href="/Demos/map/Amap.html"><i class="fa-fw fa fa-chevron-right"></i><span> Amap</span></a></li><li><a class="site-page" href="/Demos/map/BaidumapcustomresultpanelV1.4.html"><i class="fa-fw fa fa-chevron-right"></i><span> Baidumap V1.4</span></a></li><li><a class="site-page" href="/Demos/map/BaidumapcustomresultpanelV2.html"><i class="fa-fw fa fa-chevron-right"></i><span> Baidumap V2</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-5-0%E5%8D%87%E7%BA%A7%E5%88%B06-0"><span class="toc-number">1.</span> <span class="toc-text">一. 5.0升级到6.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-6-0%E5%8D%87%E7%BA%A7%E5%88%B07-1"><span class="toc-number">2.</span> <span class="toc-text">二. 6.0升级到7.1</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://www.pengwf.com/images/mac/10.png)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">麦子的博客</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 更多</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/Demos/bs/"><i class="fa-fw fa fa-chevron-right"></i><span> BootStrap</span></a></li><li><a class="site-page" href="/Demos/artdialog/"><i class="fa-fw fa fa-chevron-right"></i><span> Artdialog</span></a></li><li><a class="site-page" href="/Demos/haoanju/"><i class="fa-fw fa fa-chevron-right"></i><span> haoanju</span></a></li><li><a class="site-page" href="/Demos/threejs/"><i class="fa-fw fa fa-chevron-right"></i><span> threejs</span></a></li><li><a class="site-page" href="/Demos/canvas/"><i class="fa-fw fa fa-chevron-right"></i><span> canvas</span></a></li><li><a class="site-page" href="/Demos/cube/"><i class="fa-fw fa fa-chevron-right"></i><span> cube</span></a></li><li><a class="site-page" href="/Demos/vuejs/"><i class="fa-fw fa fa-chevron-right"></i><span> vuejs</span></a></li><li><a class="site-page" href="/Demos/rose.html"><i class="fa-fw fa fa-chevron-right"></i><span> rose</span></a></li><li><a class="site-page" href="/Demos/map/Amap.html"><i class="fa-fw fa fa-chevron-right"></i><span> Amap</span></a></li><li><a class="site-page" href="/Demos/map/BaidumapcustomresultpanelV1.4.html"><i class="fa-fw fa fa-chevron-right"></i><span> Baidumap V1.4</span></a></li><li><a class="site-page" href="/Demos/map/BaidumapcustomresultpanelV2.html"><i class="fa-fw fa fa-chevron-right"></i><span> Baidumap V2</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Ubuntu 18升级到22</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-14T16:00:00.000Z" title="发表于 2025-02-15 00:00:00">2025-02-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-14T16:00:00.000Z" title="更新于 2025-02-15 00:00:00">2025-02-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Other/">Other</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><div class="layout_post main-content" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>由于公司的破Windows电脑安装Docker以后，一直提示WSL在执行的时候有异常，所以回来在虚拟机里折腾一下Docker的安装。<br>打开Docker官网文档看了下，Ubuntu版本必须要&gt;=22.04才可以安装，而我虚拟机里还是几年前安装的elementary OS5.0（Ubuntu 18.04）,显然需要升级系统。</p>
+<h3 id="一-5-0升级到6-0"><a href="#一-5-0升级到6-0" class="headerlink" title="一. 5.0升级到6.0"></a>一. 5.0升级到6.0</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 修改源 将以下文件中的 bionic 替换为 focal</span><br><span class="line">sudo vim /etc/apt/sources.list</span><br><span class="line">sudo vim /etc/apt/sources.list.d/patches.list</span><br><span class="line">sudo vim /etc/apt/sources.list.d/elementary.list</span><br></pre></td></tr></table></figure>
+
+<p>修改后sources.list的内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.163.com/ubuntu/ focal main restricted multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ focal-updates main restricted</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ focal universe</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ focal-updates universe</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ focal-updates multiverse</span><br><span class="line">deb http://archive.canonical.com/ubuntu focal partner</span><br></pre></td></tr></table></figure>
+<p>修改后patches.list的内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://ppa.launchpad.net/elementary-os/os-patches/ubuntu focal main</span><br><span class="line">deb-src http://ppa.launchpad.net/elementary-os/os-patches/ubuntu focal main</span><br></pre></td></tr></table></figure>
+<p>修改后elementary.list的内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://ppa.launchpad.net/elementary-os/stable/ubuntu focal main</span><br><span class="line">deb-src http://ppa.launchpad.net/elementary-os/stable/ubuntu focal main</span><br></pre></td></tr></table></figure>
+<p>保存后，获取所有安装包信息并执行更新操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update -y &amp;&amp; sudo apt upgrade -y</span><br><span class="line"># 更新过程中会遇到提示xxx在安装后曾被修改（您或者某个脚本修改了它），软件包的提供者同时提供了更新了的版本，您现在希望如何处理呢？输入Y安装软件包维护者所提供的版本替换即可（默认N，保留原来的版本）</span><br></pre></td></tr></table></figure>
+<p>在此过程中一切顺利，并没有遇到稀奇古怪的问题，Ubuntu版本从18.04升级到了20.04 。</p>
+<h3 id="二-6-0升级到7-1"><a href="#二-6-0升级到7-1" class="headerlink" title="二. 6.0升级到7.1"></a>二. 6.0升级到7.1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 修改源 将以下文件中的 focal 替换为 jammy</span><br><span class="line">sudo vim /etc/apt/sources.list</span><br><span class="line">sudo vim /etc/apt/sources.list.d/patches.list</span><br><span class="line">sudo vim /etc/apt/sources.list.d/elementary.list</span><br></pre></td></tr></table></figure>
+
+<p>修改后sources.list的内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.163.com/ubuntu/ jammy main restricted multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy-updates main restricted</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy universe</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy-updates universe</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy-updates multiverse</span><br><span class="line">deb http://archive.canonical.com/ubuntu jammy partner</span><br></pre></td></tr></table></figure>
+<p>修改后patches.list的内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://ppa.launchpad.net/elementary-os/os-patches/ubuntu jammy main</span><br><span class="line">deb-src http://ppa.launchpad.net/elementary-os/os-patches/ubuntu jammy main</span><br></pre></td></tr></table></figure>
+<p>修改后elementary.list的内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://ppa.launchpad.net/elementary-os/stable/ubuntu jammy main</span><br><span class="line">deb-src http://ppa.launchpad.net/elementary-os/stable/ubuntu jammy main</span><br></pre></td></tr></table></figure>
+<p>保存后，获取所有安装包信息并执行更新操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update -y &amp;&amp; sudo apt upgrade -y</span><br><span class="line"># 更新过程中会遇到提示xxx在安装后曾被修改（您或者某个脚本修改了它），软件包的提供者同时提供了更新了的版本，您现在希望如何处理呢？输入Y安装软件包维护者所提供的版本替换即可（默认N，保留原来的版本）</span><br></pre></td></tr></table></figure>
+<p>升级到一半，终端中有错误信息，提示因为python依赖问题，升级中断了，手动安装python也是同样失败……<br>重启设备，登录界面显示异常，无法登录，哦豁，该来的终于来了，进入恢复模式抢救一下：</p>
+<ol>
+<li>再次重启设备，根据屏幕上的提示，按下ESC键，进入elementary启动模式选择界面，选中Advance模式后回车；</li>
+<li>进入GRUB选择界面，选择一个内核的recovery模式回车，等待进入恢复模式（失败则尝试其他内核的recovery模式）；</li>
+<li>按方向键选中network选项，按回车键先启用网络；</li>
+<li>再次按方向键选中root选项，进入命令行模式进行抢救。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 清除多余的内核及无用的包</span><br><span class="line">apt autoremove --purge</span><br><span class="line">apt autoclean</span><br><span class="line">dpkg --list | grep linux-image</span><br><span class="line"># 上述命令会列出本机安装过的内核，保留1-2个旧的备用，其他删除，然后重启再次进入恢复模式</span><br><span class="line">apt purge linux-image-x.x.x-x-generic</span><br><span class="line">reboot</span><br><span class="line"># 更新包信息及安装更新包，然后重启</span><br><span class="line">apt update</span><br><span class="line">apt install python</span><br><span class="line">apt upgrade -y</span><br><span class="line">apt dist-upgrade</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+重启后，终于能登录了，升级成功，Ubuntu版本从20.04升级到22.04 。</li>
+</ol>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">pengweifu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.pengwf.com/2025/02/15/other/Ubuntu-upgrade/">https://www.pengwf.com/2025/02/15/other/Ubuntu-upgrade/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.pengwf.com" target="_blank">麦子的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/skill/">skill</a></div><div class="post_share"><div class="social-share" data-image="https://www.pengwf.com/images/mac/10.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/images/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/images/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/02/15/other/Docker-basic/"><img class="prev-cover" src="https://www.pengwf.com/images/mac/10.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Docker在前端开发中的基础应用</div></div></a></div><div class="next-post pull-right"><a href="/2024/11/25/web/CSS-Hole/"><img class="next-cover" src="https://www.pengwf.com/images/mac/10.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS优惠券打卡样式</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/11/26/android/ANDROID-gradle/" title="在gradle中设置打包秘钥及输出apk名称"><img class="cover" src="https://www.pengwf.com/images/mac/10.png"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-26</div><div class="title">在gradle中设置打包秘钥及输出apk名称</div></div></a></div><div><a href="/2019/10/24/ios/IOS-13x/" title="iOS13 适配"><img class="cover" src="https://www.pengwf.com/images/mac/10.png"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-24</div><div class="title">iOS13 适配</div></div></a></div><div><a href="/2019/12/25/ios/IOS-WIFI/" title="iOS13 获取已连接的WIFI名称"><img class="cover" src="https://www.pengwf.com/images/mac/10.png"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-25</div><div class="title">iOS13 获取已连接的WIFI名称</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></article></div><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2011 - 2025 By pengweifu</div><div class="footer_custom_text">Powered by Hexo</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><script>function loadValine () {
+  function initValine () {
+    const initData = {
+      el: '#vcomment',
+      appId: 'GhhAA0g4gw9mRpiEtPJPzflW-MdYXbMMI',
+      appKey: 'zoVfkgXT2AASP1dzJEEAUxEI',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: 'https://blog.pengwf.com',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.bootcdn.net/ajax/libs/valine/1.5.1/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.bootcdn.net/ajax/libs/butterfly-extsrc/1.1.3/canvas-fluttering-ribbon.min.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?dacd8ad9b164966db78ec428d192d58c"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":40},"mobile":{"show":false},"react":{"opacity":1},"log":false});</script></body></html>

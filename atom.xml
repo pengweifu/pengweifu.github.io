@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2024-11-21T16:00:00.000Z</updated>
+  <updated>2025-02-14T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker在前端开发中的基础应用</title>
+    <link href="https://www.pengwf.com/2025/02/15/other/Docker-basic/"/>
+    <id>https://www.pengwf.com/2025/02/15/other/Docker-basic/</id>
+    <published>2025-02-14T16:00:00.000Z</published>
+    <updated>2025-02-14T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">Docker在前端开发中的基础应用</summary>
+    
+    
+    
+    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 18升级到22</title>
+    <link href="https://www.pengwf.com/2025/02/15/other/Ubuntu-upgrade/"/>
+    <id>https://www.pengwf.com/2025/02/15/other/Ubuntu-upgrade/</id>
+    <published>2025-02-14T16:00:00.000Z</published>
+    <updated>2025-02-14T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">Ubuntu 18升级到22</summary>
+    
+    
+    
+    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS优惠券打卡样式</title>
+    <link href="https://www.pengwf.com/2024/11/25/web/CSS-Hole/"/>
+    <id>https://www.pengwf.com/2024/11/25/web/CSS-Hole/</id>
+    <published>2024-11-24T16:00:00.000Z</published>
+    <updated>2024-11-24T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">CSS优惠券打卡样式</summary>
+    
+    
+    
+    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
+    
+    
+    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS绘制信封形状的几种写法</title>
@@ -348,67 +405,6 @@
     
     
     <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用CSS切换横竖屏显示</title>
-    <link href="https://www.pengwf.com/2021/11/01/web/CSS-rotate/"/>
-    <id>https://www.pengwf.com/2021/11/01/web/CSS-rotate/</id>
-    <published>2021-10-31T16:00:00.000Z</published>
-    <updated>2021-10-31T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">用CSS切换横竖屏显示</summary>
-    
-    
-    
-    <category term="CSS" scheme="https://www.pengwf.com/categories/CSS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>监控浏览器打开开发者工具事件</title>
-    <link href="https://www.pengwf.com/2021/07/09/web/JS-Console-Watch/"/>
-    <id>https://www.pengwf.com/2021/07/09/web/JS-Console-Watch/</id>
-    <published>2021-07-08T16:00:00.000Z</published>
-    <updated>2021-07-08T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">在某些情况下我们需要检测当前用户是否打开了浏览器开发者工具，比如前端爬虫检测，如果检测到用户打开了控制台就认为是潜在的爬虫用户，再通过其它策略对其进行处理。</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="console" scheme="https://www.pengwf.com/tags/console/"/>
-    
-    <category term="js" scheme="https://www.pengwf.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 verdaccio 搭建私有npm镜像(续)</title>
-    <link href="https://www.pengwf.com/2021/05/25/other/TOOL-verdaccio1/"/>
-    <id>https://www.pengwf.com/2021/05/25/other/TOOL-verdaccio1/</id>
-    <published>2021-05-24T16:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">Verdaccio 开箱即用，拥有自己的小型数据库，能够代理其它npm镜像（例如 npmjs.org），缓存下载的模块。此外 Verdaccio 还易于扩展存储功能，它支持各种社区制作的插件，以连接到亚马逊的 s3、谷歌云存储等服务或创建自己的插件。</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
-    
-    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
     
   </entry>
   
