@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Three.js</title>
+    <script type="text/javascript" src="three.min.js"></script>
+    <script type="text/javascript" src="OrbitControls.js"></script>
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <style type="text/css">
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        /*background: #000;*/
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+
+      .uploader {
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      input {
+        color: transparent;
+        width: 80px;
+      }
+      input::file-selector-button {
+        background: transparent;
+        border: 0;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="uploader">
+      <input accept="image/*" type="file" id="uploadIMG" onchange="btnUploadFile(event)" />
+    </div>
+    <script type="text/javascript">
+      var gui = new dat.GUI()
+      var files = gui.addFolder('选择场景')
+      var animates = gui.addFolder('动画')
+      var options = {
+        auto: true,
+        file: 'ShawanPark',
+      }
+      animates.add(options, 'auto')
+      files
+        .add(options, 'file', {
+          沙湾公园: 'ShawanPark',
+          洋湖湿地公园: 'YanghuPark',
+        })
+        .onChange(function (value) {
+          texture = new THREE.TextureLoader().load('./' + value + '.PHOTOSPHERE.jpg')
+          material.map = texture
+          material.needsUpdate = true
+        })
+      var scene = new THREE.Scene()
+      var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+
+      var renderer = new THREE.WebGLRenderer()
+      renderer.setSize(window.innerWidth, window.innerHeight)
+      document.body.appendChild(renderer.domElement)
+      var controls = new THREE.OrbitControls(camera, renderer.domElement)
+      controls.maxDistance = 80
+
+      // var loader = new THREE.CubeTextureLoader();
+      // loader.setPath('./env1/');
+      // var texture = loader.load([
+      //   'px.jpg',
+      //   'nx.jpg',
+      //   'py.jpg',
+      //   'ny.jpg',
+      //   'pz.jpg',
+      //   'nz.jpg'
+      // ]);
+      // scene.background = texture
+      // camera.position.z = 5
+
+      var geometry = new THREE.SphereGeometry(80, 64, 64)
+      var texture = new THREE.TextureLoader().load('./ShawanPark.PHOTOSPHERE.jpg')
+      var material = new THREE.MeshBasicMaterial({
+        map: texture,
+        side: THREE.BackSide,
+      })
+      var obj = new THREE.Mesh(geometry, material)
+      obj.scale.z = -1
+      scene.add(obj)
+      camera.position.z = 0.01
+
+      var animate = function () {
+        requestAnimationFrame(animate)
+        if (options.auto) {
+          obj.rotation.y += 0.001
+        }
+        controls.update()
+        renderer.render(scene, camera)
+      }
+
+      animate()
+
+      function btnUploadFile(e, type) {
+        //获取图片
+        var files = e.target.files
+        var file = files[0]
+        // 接受 jpeg, jpg, png 类型的图片
+        if (!/\/(?:jpeg|jpg|png)/i.test(file.type)) {
+          return
+        }
+        var reader = new FileReader()
+        reader.onload = function () {
+          material.map = THREE.ImageUtils.loadTexture(this.result) //图片base64字符串
+          material.needsUpdate = true
+        }
+        reader.readAsDataURL(file) //Base64
+      }
+    </script>
+  </body>
+</html>
