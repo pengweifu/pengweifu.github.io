@@ -10,6 +10,8 @@
     <script type="text/javascript" src="three.min.js"></script>
     <script type="text/javascript" src="OrbitControls.js"></script>
     <script type="text/javascript" src="dat.gui.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.shCircleLoader.js"></script>
     <style type="text/css">
       html,
       body {
@@ -42,6 +44,17 @@
         border: 0;
         color: #fff;
       }
+      #loader {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        width: 120px;
+        height: 120px;
+        z-index: 99;
+        transform: translate(-50%, -50%);
+        display: none;
+        color: #fff;
+      }
     </style>
   </head>
 
@@ -49,6 +62,7 @@
     <div class="uploader">
       <input accept="image/*" type="file" id="uploadIMG" onchange="btnUploadFile(event)" />
     </div>
+    <div id="loader"></div>
     <script type="text/javascript">
       var gui = new dat.GUI()
       var files = gui.addFolder('选择场景')
@@ -64,9 +78,26 @@
           洋湖湿地公园: 'YanghuPark',
         })
         .onChange(function (value) {
-          texture = new THREE.TextureLoader().load('./' + value + '.PHOTOSPHERE.jpg')
-          material.map = texture
-          material.needsUpdate = true
+          ajaxTextureLoader().load(
+            './' + value + '.PHOTOSPHERE.jpg',
+            function (texture) {
+              material.map = texture
+              material.needsUpdate = true
+            },
+            function (xhr) {
+              var p = Math.floor((xhr.loaded / xhr.total) * 100)
+              if (p === 100 || p - progress >= 5) {
+                progress = p
+                $('#loader').shCircleLoader('progress', progress + '%')
+              }
+              if (progress >= 100) {
+                $('#loader').hide()
+              }
+            },
+            function (e) {
+              console.log(e)
+            }
+          )
         })
       var scene = new THREE.Scene()
       var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -91,26 +122,86 @@
       // camera.position.z = 5
 
       var geometry = new THREE.SphereGeometry(80, 64, 64)
-      var texture = new THREE.TextureLoader().load('./ShawanPark.PHOTOSPHERE.jpg')
-      var material = new THREE.MeshBasicMaterial({
-        map: texture,
-        side: THREE.BackSide,
-      })
-      var obj = new THREE.Mesh(geometry, material)
-      obj.scale.z = -1
-      scene.add(obj)
-      camera.position.z = 0.01
+      var material
+      var progress = 0
+      ajaxTextureLoader().load(
+        './ShawanPark.PHOTOSPHERE.jpg',
+        function (texture) {
+          material = new THREE.MeshBasicMaterial({
+            map: texture,
+            side: THREE.BackSide,
+          })
+          var obj = new THREE.Mesh(geometry, material)
+          obj.scale.z = -1
+          scene.add(obj)
+          camera.position.z = 0.01
 
-      var animate = function () {
-        requestAnimationFrame(animate)
-        if (options.auto) {
-          obj.rotation.y += 0.001
+          var animate = function () {
+            requestAnimationFrame(animate)
+            if (options.auto) {
+              obj.rotation.y += 0.001
+            }
+            controls.update()
+            renderer.render(scene, camera)
+          }
+
+          animate()
+        },
+        function (xhr) {
+          var p = (p = Math.floor((xhr.loaded / xhr.total) * 100))
+          if (p === 100 || p - progress >= 5) {
+            progress = p
+            $('#loader').shCircleLoader('progress', progress + '%')
+          }
+          if (progress >= 100) {
+            $('#loader').hide()
+          }
+        },
+        function (e) {
+          console.log(e)
         }
-        controls.update()
-        renderer.render(scene, camera)
-      }
+      )
 
-      animate()
+      function ajaxTextureLoader() {
+        const cache = THREE.Cache
+        const textureLoader = new THREE.TextureLoader()
+        const fileLoader = new THREE.FileLoader()
+        cache.enabled = true
+        fileLoader.setResponseType('blob')
+
+        const load = (url, onLoad, onProgress, onError) => {
+          const loadImageAsTexture = () => {
+            textureLoader.load(url, onLoad, () => {}, onError)
+          }
+
+          const cacheImage = (blob) => {
+            const objUrl = URL.createObjectURL(blob)
+            const image = document.createElement('img')
+            image.onload = () => {
+              cache.add(url, image)
+              URL.revokeObjectURL(objUrl)
+              document.body.removeChild(image)
+              loadImageAsTexture()
+            }
+
+            image.src = objUrl
+            image.style.visibility = 'hidden'
+            document.body.appendChild(image)
+          }
+
+          const cached = cache.get(url)
+          progress = 0
+          $('#loader').show()
+          $('#loader').shCircleLoader({ color: 'red' })
+          if (cached) {
+            onProgress({ loaded: 1, total: 1 })
+            loadImageAsTexture()
+          } else {
+            fileLoader.load(url, cacheImage, onProgress, onError)
+          }
+        }
+        return Object.assign({}, textureLoader, { load })
+      }
 
       function btnUploadFile(e, type) {
         //获取图片
