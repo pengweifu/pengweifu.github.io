@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2025-02-14T16:00:00.000Z</updated>
+  <updated>2025-02-25T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript+leafletjs自定义Marker</title>
+    <link href="https://www.pengwf.com/2025/02/26/web/JS-leafletjs-custom/"/>
+    <id>https://www.pengwf.com/2025/02/26/web/JS-leafletjs-custom/</id>
+    <published>2025-02-25T16:00:00.000Z</published>
+    <updated>2025-02-25T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">TypeScript+leafletjs自定义一个支持角度设置的Marker</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker在前端开发中的基础应用</title>
@@ -386,25 +405,6 @@
     
     
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决macOS升级导致git命令报错</title>
-    <link href="https://www.pengwf.com/2021/11/01/other/macOS-xcrun/"/>
-    <id>https://www.pengwf.com/2021/11/01/other/macOS-xcrun/</id>
-    <published>2021-10-31T16:00:00.000Z</published>
-    <updated>2021-10-31T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">解决macOS升级Monterey导致使用git命令时报错</summary>
-    
-    
-    
-    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="tools" scheme="https://www.pengwf.com/tags/tools/"/>
     
   </entry>
   
