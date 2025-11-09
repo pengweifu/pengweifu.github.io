@@ -6,7 +6,7 @@
   <link href="https://www.pengwf.com/atom.xml" rel="self"/>
   
   <link href="https://www.pengwf.com/"/>
-  <updated>2025-10-24T16:00:00.000Z</updated>
+  <updated>2025-11-08T16:00:00.000Z</updated>
   <id>https://www.pengwf.com/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>多视角监控回放页面实现(下)</title>
+    <link href="https://www.pengwf.com/2025/11/09/web/JS-vue-monitor1/"/>
+    <id>https://www.pengwf.com/2025/11/09/web/JS-vue-monitor1/</id>
+    <published>2025-11-08T16:00:00.000Z</published>
+    <updated>2025-11-08T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">用 Vue 3 + TypeScript + jessibuca + TailwindCSS 实现多视角监控回放页面</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+    <category term="vite" scheme="https://www.pengwf.com/tags/vite/"/>
+    
+    <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多视角监控回放页面实现</title>
+    <link href="https://www.pengwf.com/2025/11/08/web/JS-vue-monitor/"/>
+    <id>https://www.pengwf.com/2025/11/08/web/JS-vue-monitor/</id>
+    <published>2025-11-07T16:00:00.000Z</published>
+    <updated>2025-11-07T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">用 Vue 3 + TypeScript + flv.js + TailwindCSS 实现多视角监控回放页面</summary>
+    
+    
+    
+    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
+    
+    
+    <category term="vue" scheme="https://www.pengwf.com/tags/vue/"/>
+    
+    <category term="vite" scheme="https://www.pengwf.com/tags/vite/"/>
+    
+    <category term="ts" scheme="https://www.pengwf.com/tags/ts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS 7 重置密码</title>
+    <link href="https://www.pengwf.com/2025/11/07/other/centos-7-reset/"/>
+    <id>https://www.pengwf.com/2025/11/07/other/centos-7-reset/</id>
+    <published>2025-11-06T16:00:00.000Z</published>
+    <updated>2025-11-06T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">CentOS 7 重置密码</summary>
+    
+    
+    
+    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
+    
+    
+    <category term="server" scheme="https://www.pengwf.com/tags/server/"/>
+    
+  </entry>
   
   <entry>
     <title>vite项目发版后自动清理缓存</title>
@@ -339,63 +404,6 @@
     
     
     <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在电脑上下载Google Play上的APP安装包</title>
-    <link href="https://www.pengwf.com/2022/07/07/other/apk-download/"/>
-    <id>https://www.pengwf.com/2022/07/07/other/apk-download/</id>
-    <published>2022-07-06T16:00:00.000Z</published>
-    <updated>2022-07-06T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">在电脑上下载Google Play上的APP安装包</summary>
-    
-    
-    
-    <category term="Other" scheme="https://www.pengwf.com/categories/Other/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用nodejs编写cli(命令行)</title>
-    <link href="https://www.pengwf.com/2022/07/07/web/JS-npm-cli/"/>
-    <id>https://www.pengwf.com/2022/07/07/web/JS-npm-cli/</id>
-    <published>2022-07-06T16:00:00.000Z</published>
-    <updated>2022-07-06T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">使用nodejs编写cli(命令行),从git仓库拉取模板生成不同框架的项目</summary>
-    
-    
-    
-    <category term="JS" scheme="https://www.pengwf.com/categories/JS/"/>
-    
-    
-    <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MacOS下部分App多语言切换</title>
-    <link href="https://www.pengwf.com/2022/06/16/ios/IOS-lang/"/>
-    <id>https://www.pengwf.com/2022/06/16/ios/IOS-lang/</id>
-    <published>2022-06-15T16:00:00.000Z</published>
-    <updated>2022-06-15T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">在英文系统下,修改部分App为中文界面</summary>
-    
-    
-    
-    <category term="iOS" scheme="https://www.pengwf.com/categories/iOS/"/>
     
     
     <category term="skill" scheme="https://www.pengwf.com/tags/skill/"/>
