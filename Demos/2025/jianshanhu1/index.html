@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Three.js</title>
+    <script type="text/javascript" src="three.min.js"></script>
+    <script type="text/javascript" src="OrbitControls.js"></script>
+  </head>
+  <body>
+    <script>
+      let scene, camera, renderer, controls, mesh
+      const textures = []
+      const materials = []
+      const images = ['left.jpg', 'right.jpg', 'up.jpg', 'down.jpg', 'back.jpg', 'front.jpg']
+      scene = new THREE.Scene()
+      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10)
+      camera.position.set(0, 0, 0.1)
+      renderer = new THREE.WebGLRenderer({ antialias: true })
+      renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setPixelRatio(window.devicePixelRatio)
+      document.body.appendChild(renderer.domElement)
+
+      controls = new THREE.OrbitControls(camera, renderer.domElement)
+
+      images.forEach((item) => {
+        materials.push(new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load(item) }))
+      })
+      mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), materials)
+      mesh.geometry.scale(1, 1, -1)
+      scene.add(mesh)
+      renderer.setAnimationLoop(() => {
+        controls.update() // 启用阻尼时需要
+        renderer.render(scene, camera) // 渲染
+      })
+    </script>
+  </body>
+</html>
