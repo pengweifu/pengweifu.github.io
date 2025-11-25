@@ -10,17 +10,17 @@
     <script type="text/javascript" src="three.min.js"></script>
     <script type="text/javascript" src="OrbitControls.js"></script>
   </head>
-  <body>
+  <body style="margin:0;">
     <script>
       let scene, camera, renderer, controls, mesh
       const textures = []
       const materials = []
       const images = ['left.jpg', 'right.jpg', 'up.jpg', 'down.jpg', 'back.jpg', 'front.jpg']
       scene = new THREE.Scene()
-      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10)
+      camera = new THREE.PerspectiveCamera(75, document.body.clientWidth / document.body.clientHeight, 0.1, 10)
       camera.position.set(0, 0, 0.1)
       renderer = new THREE.WebGLRenderer({ antialias: true })
-      renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setSize(document.body.clientWidth, document.body.clientHeight)
       renderer.setPixelRatio(window.devicePixelRatio)
       document.body.appendChild(renderer.domElement)
 
