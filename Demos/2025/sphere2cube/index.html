@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全景图球面转6面体</title>
+    <script src="../js/three.min.js"></script>
+    <script src="../js/OrbitControls.js"></script>
+    <script src="../js/tailwindcss.global.min.js"></script>
+  </head>
+  <body class="m-0 h-screen relative">
+    <div id="threeRef" class="w-full h-full"></div>
+    <button
+      id="upload"
+      class="bg-orange-400 absolute bottom-4 right-4 px-3 py-2 text-white cursor-pointer rounded-md"
+    >
+      Upload
+    </button>
+    <button
+      id="download"
+      class="bg-rose-400 absolute bottom-4 right-30 px-3 py-2 text-white cursor-pointer rounded-md"
+    >
+      Download
+    </button>
+    <script type="text/javascript">
+      const dom = document.getElementById('threeRef')
+      const upload = document.getElementById('upload')
+      const download = document.getElementById('download')
+      let px, nx, py, ny, pz, nz, scene, camera, renderer, controls, mesh, materials
+
+      init()
+
+      upload.addEventListener('click', async () => {
+        try {
+          const [fileHandle] = await window.showOpenFilePicker({
+            types: [
+              {
+                description: '图片文件',
+                accept: { 'image/*': ['.png', '.jpg', '.jpeg'] },
+              },
+            ],
+          })
+          const file = await fileHandle.getFile()
+          //   const reader = new FileReader()
+          //   reader.onload = (e) => {
+          //     uploadUrl = e.target.result
+          //     console.log(uploadUrl)
+          //   }
+          //   reader.readAsDataURL(file)
+          const [pxUrl, nxUrl, nyUrl, pyUrl, nzUrl, pzUrl] = await get6FaceImgUrl(file)
+          px = pxUrl
+          nx = nxUrl
+          ny = nyUrl
+          py = pyUrl
+          nz = nzUrl
+          pz = pzUrl
+          addCube([nxUrl, pxUrl, pyUrl, nyUrl, nzUrl, pzUrl])
+        } catch (error) {}
+      })
+      download.addEventListener('click', () => {
+        if (px) {
+          setTimeout(() => {
+            downloadUrlFile(px, 'px.jpg')
+          }, 100)
+        }
+        if (nx) {
+          setTimeout(() => {
+            downloadUrlFile(nx, 'nx.jpg')
+          }, 200)
+        }
+        if (py) {
+          setTimeout(() => {
+            downloadUrlFile(py, 'py.jpg')
+          }, 300)
+        }
+        if (ny) {
+          setTimeout(() => {
+            downloadUrlFile(ny, 'ny.jpg')
+          }, 400)
+        }
+        if (pz) {
+          setTimeout(() => {
+            downloadUrlFile(pz, 'pz.jpg')
+          }, 500)
+        }
+        if (nz) {
+          setTimeout(() => {
+            downloadUrlFile(nz, 'nz.jpg')
+          }, 600)
+        }
+      })
+
+      function init() {
+        scene = new THREE.Scene()
+        camera = new THREE.PerspectiveCamera(70, dom.clientWidth / dom.clientHeight, 0.1, 10)
+        renderer = new THREE.WebGLRenderer({ antialias: true })
+        controls = new THREE.OrbitControls(camera, renderer.domElement)
+        renderer.setPixelRatio(window.devicePixelRatio)
+        renderer.setSize(dom.clientWidth, dom.clientHeight)
+        renderer.setAnimationLoop(() => {
+          controls.update()
+          renderer.render(scene, camera)
+        })
+        camera.position.set(0, 0, 0.1)
+        dom.appendChild(renderer.domElement)
+      }
+
+      function addCube(imgs) {
+        materials = []
+        imgs.forEach((img) => {
+          materials.push(new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load(img) }))
+        })
+        if (mesh) {
+          mesh.material = materials
+          mesh.material.forEach((item) => {
+            item.needsUpdate = true
+          })
+        } else {
+          mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), materials)
+          mesh.geometry.scale(1, 1, -1)
+          scene.add(mesh)
+        }
+      }
+
+      /**
+       * 将给定的x值限制在最小值和最大值之间
+       * @param {number} x 给定的值
+       * @param {number} min 最小值
+       * @param {number} max 最大值
+       * @returns 返回目标值
+       */
+      const clamp = (x, min, max) => {
+        return Math.min(max, Math.max(x, min))
+      }
+
+      /**
+       * 模运算（取余运算）的实现
+       * 但它进行了一些额外的处理以确保结果始终是非负的，即使输入的 x 是一个负数。
+       * 在标准的取余运算中，如果 x 是负数，那么结果也可能是负数。
+       * 但这个 mod 函数通过添加 n 并再次取模来确保结果总是在 0 到 n-1 的范围内。
+       * @param {number} x 要进行模运算的数值
+       * @param {number} n 模数，通常是一个正整数
+       * @returns
+       */
+      const mod = (x, n) => {
+        return ((x % n) + n) % n
+      }
+
+      // 定义各个面枚举
+      const FaceEnum = {
+        PZ: 0, // 正Z面（面向观察者的面）
+        NZ: 1, // 负Z面（背向观察者的面）
+        PX: 2, // 正X面（观察者的右侧面）
+        NX: 3, // 负X面（观察者的左侧面）
+        PY: 4, // 正Y面（观察者的上方面）
+        NY: 5, // 负Y面（观察者的下方面）
+      }
+
+      // 各个面取向函数映射对象
+      const orientations = {
+        [FaceEnum.PZ]: (x, y) => ({ x: -1, y: -x, z: -y }),
+        [FaceEnum.NZ]: (x, y) => ({ x: 1, y: x, z: -y }),
+        [FaceEnum.PX]: (x, y) => ({ x: x, y: -1, z: -y }),
+        [FaceEnum.NX]: (x, y) => ({ x: -x, y: 1, z: -y }),
+        [FaceEnum.PY]: (x, y) => ({ x: y, y: x, z: 1 }),
+        [FaceEnum.NY]: (x, y) => ({ x: -y, y: x, z: -1 }),
+      }
+
+      // 插值方式枚举
+      const InterpolationEnum = {
+        Bilinear: 0, // 双线性插值，使用目标像素周围四个源像素的线性组合进行插值，在单个方向上线性，整体非线性，插值效果较平滑
+        Bicubic: 1, // 双立方/双三次插值，使用更复杂的三次卷积公式，考虑周围更多像素的影响，插值效果通常比双线性更好，但计算量更大
+        Lanczos: 2, // Lanczos插值，适用于高质量图像重采样，但计算复杂度较高
+        Nearest: 3, // 最近邻插值，选择离目标像素最近的源像素值作为插值结果，方法简单快速，但可能导致图像锯齿化
+      }
+
+      // 各个插值方式函数映射对象
+      const interpolations = {
+        [InterpolationEnum.Bilinear]: copyPixelBilinear,
+        [InterpolationEnum.Bicubic]: copyPixelBicubic,
+        [InterpolationEnum.Lanczos]: copyPixelLanczos,
+        [InterpolationEnum.Nearest]: copyPixelNearest,
+      }
+
+      /**
+       * 最近邻插值，选择离目标像素最近的源像素值作为插值结果，方法简单快速，但可能导致图像锯齿化
+       * @param {ImageData} read 输入
+       * @param {ImageData} write 输出
+       * @param {number} xFrom x坐标
+       * @param {number} yFrom y坐标
+       * @param {number} to 结束坐标
+       */
+      function copyPixelNearest(read, write, xFrom, yFrom, to) {
+        const { width, height, data } = read
+        const readIndex = (x, y) => 4 * (y * width + x)
+
+        const nearest = readIndex(
+          clamp(Math.round(xFrom), 0, width - 1),
+          clamp(Math.round(yFrom), 0, height - 1)
+        )
+
+        for (let channel = 0; channel < 3; channel++) {
+          write.data[to + channel] = data[nearest + channel]
+        }
+      }
+
+      /**
+       * 双线性插值，使用目标像素周围四个源像素的线性组合进行插值，在单个方向上线性，整体非线性，插值效果较平滑
+       * @param {ImageData} read 输入
+       * @param {ImageData} write 输出
+       * @param {number} xFrom x坐标
+       * @param {number} yFrom y坐标
+       * @param {number} to 结束坐标
+       */
+      function copyPixelBilinear(read, write, xFrom, yFrom, to) {
+        const { width, height, data } = read
+        const readIndex = (x, y) => 4 * (y * width + x)
+
+        const xl = clamp(Math.floor(xFrom), 0, width - 1)
+        const xr = clamp(Math.ceil(xFrom), 0, width - 1)
+        const xf = xFrom - xl
+
+        const yl = clamp(Math.floor(yFrom), 0, height - 1)
+        const yr = clamp(Math.ceil(yFrom), 0, height - 1)
+        const yf = yFrom - yl
+
+        const p00 = readIndex(xl, yl)
+        const p10 = readIndex(xr, yl)
+        const p01 = readIndex(xl, yr)
+        const p11 = readIndex(xr, yr)
+
+        for (let channel = 0; channel < 3; channel++) {
+          const p0 = data[p00 + channel] * (1 - xf) + data[p10 + channel] * xf
+          const p1 = data[p01 + channel] * (1 - xf) + data[p11 + channel] * xf
+          write.data[to + channel] = Math.ceil(p0 * (1 - yf) + p1 * yf)
+        }
+      }
+
+      /**
+       * 图像重采样（针对双线性或更高级的插值方法进行了泛化处理）
+       * @param {ImageData} read 输入
+       * @param {ImageData} write 输出
+       * @param {number} xFrom x坐标
+       * @param {number} yFrom y坐标
+       * @param {number} to 结束坐标
+       * @param {number} filterSize 插值滤波器的大小（半径），决定了在重采样过程中将考虑多少周围像素
+       * @param {number} kernel 一个函数，用于计算给定偏移量的插值权重
+       */
+      function kernelResample(read, write, xFrom, yFrom, to, filterSize, kernel) {
+        const { width, height, data } = read
+        const readIndex = (x, y) => 4 * (y * width + x)
+
+        const twoFilterSize = 2 * filterSize
+        const xMax = width - 1
+        const yMax = height - 1
+        const xKernel = new Array(4)
+        const yKernel = new Array(4)
+
+        const xl = Math.floor(xFrom)
+        const yl = Math.floor(yFrom)
+        const xStart = xl - filterSize + 1
+        const yStart = yl - filterSize + 1
+
+        for (let i = 0; i < twoFilterSize; i++) {
+          xKernel[i] = kernel(xFrom - (xStart + i))
+          yKernel[i] = kernel(yFrom - (yStart + i))
+        }
+
+        for (let channel = 0; channel < 3; channel++) {
+          let q = 0
+
+          for (let i = 0; i < twoFilterSize; i++) {
+            const y = yStart + i
+            const yClamped = clamp(y, 0, yMax)
+            let p = 0
+            for (let j = 0; j < twoFilterSize; j++) {
+              const x = xStart + j
+              const index = readIndex(clamp(x, 0, xMax), yClamped)
+              p += data[index + channel] * xKernel[j]
+            }
+            q += p * yKernel[i]
+          }
+
+          write.data[to + channel] = Math.round(q)
+        }
+      }
+
+      /**
+       * 双立方/双三次插值，使用更复杂的三次卷积公式，考虑周围更多像素的影响，插值效果通常比双线性更好，但计算量更大
+       * @param {ImageData} read 输入
+       * @param {ImageData} write 输出
+       * @param {number} xFrom x坐标
+       * @param {number} yFrom y坐标
+       * @param {number} to 结束坐标
+       */
+      function copyPixelBicubic(read, write, xFrom, yFrom, to) {
+        const b = -0.5
+        const kernel = (x) => {
+          x = Math.abs(x)
+          const x2 = x * x
+          const x3 = x * x * x
+          return x <= 1 ? (b + 2) * x3 - (b + 3) * x2 + 1 : b * x3 - 5 * b * x2 + 8 * b * x - 4 * b
+        }
+        kernelResample(read, write, xFrom, yFrom, to, 2, kernel)
+      }
+
+      /**
+       * Lanczos插值，适用于高质量图像重采样，但计算复杂度较高
+       * @param {ImageData} read 输入
+       * @param {ImageData} write 输出
+       * @param {number} xFrom x坐标
+       * @param {number} yFrom y坐标
+       * @param {number} to 结束坐标
+       */
+      function copyPixelLanczos(read, write, xFrom, yFrom, to) {
+        const filterSize = 5
+        const kernel = (x) => {
+          if (x === 0) {
+            return 1
+          } else {
+            const xp = Math.PI * x
+            return (filterSize * Math.sin(xp) * Math.sin(xp / filterSize)) / (xp * xp)
+          }
+        }
+        kernelResample(read, write, xFrom, yFrom, to, filterSize, kernel)
+      }
+
+      /**
+       * 复制对应面图像数据
+       * @param {ImageData} readData canvas获取的全景图像素数据
+       * @param {FaceEnum} face 面
+       * @param {number} rotation 旋转角度
+       * @param {InterpolationEnum} interpolation 插值方式
+       * @param {number} maxWidth 返回图片最大宽度
+       */
+      function copyFaceData(readData, face, rotation, interpolation, maxWidth = Infinity) {
+        // 图片宽高
+        const faceWidth = Math.min(maxWidth, readData.width / 4)
+        const faceHeight = faceWidth
+        // 图像数据
+        const writeData = new ImageData(faceWidth, faceHeight)
+
+        for (let x = 0; x < faceWidth; x++) {
+          for (let y = 0; y < faceHeight; y++) {
+            const to = 4 * (y * faceWidth + x) // 计算Alpha（rgba透明度）坐标
+            writeData.data[to + 3] = 255 // 填充Alpha（rgba透明度）通道：完全不透明
+            const cube = orientations[face](
+              (2 * (x + 0.5)) / faceWidth - 1,
+              (2 * (y + 0.5)) / faceHeight - 1
+            ) // 在立方体表面上获得位置，立方体以原点为中心，边长为2
+            // 直角坐标球坐标变换法将立方体面投影到单位球面上
+            const r = Math.sqrt(cube.x * cube.x + cube.y * cube.y + cube.z * cube.z) // 计算半径
+            const lon = mod(Math.atan2(cube.y, cube.x) + rotation, 2 * Math.PI)
+            const lat = Math.acos(cube.z / r)
+            // 不同插值方式->复制像素的方法
+            interpolations[interpolation](
+              readData,
+              writeData,
+              (readData.width * lon) / Math.PI / 2 - 0.5,
+              (readData.height * lat) / Math.PI - 0.5,
+              to
+            )
+          }
+        }
+
+        return writeData
+      }
+
+      // 图片类型
+      const mimeType = {
+        jpg: 'image/jpeg',
+        png: 'image/png',
+      }
+
+      /**
+       * 图像数据转Blob
+       * 可用于图片上传
+       * @param {ImageData} imageData 图像数据对象
+       * @param {string} extension 图片扩展名
+       */
+      function imgDataToBlob(imageData, extension) {
+        const canvas = document.createElement('canvas')
+        // 设置canvas的尺寸以匹配ImageData的尺寸
+        canvas.width = imageData.width
+        canvas.height = imageData.height
+        const ctx = canvas.getContext('2d') // 获取2D绘图上下文
+        // 将ImageData绘制到canvas上
+        ctx?.putImageData(imageData, 0, 0)
+        // 法二：异步，图片blob数据
+        return new Promise((resolve, reject) => {
+          canvas.toBlob(
+            (blob) => (blob ? resolve(blob) : reject('blob is null...')),
+            mimeType[extension],
+            0.92
+          )
+        })
+      }
+
+      /**
+       * 图片文件对象转ImageData
+       * @param file 图片文件对象
+       */
+      function getImgDataFromFile(file) {
+        const url = URL.createObjectURL(file) // 创建一个表示文件内容的临时URL
+        const img = new Image() // 创建一个新的Image对象
+        img.src = url // 设置Image对象的src为临时URL
+        return new Promise((resolve, reject) => {
+          // 图片加载完成后的处理
+          img.onload = function () {
+            const canvas = document.createElement('canvas') // 创建canvas元素
+            const ctx = canvas.getContext('2d')
+            if (!ctx) {
+              reject('canvas2d is null')
+              return
+            }
+            // 设置canvas的大小为图片的原始大小
+            canvas.width = img.width
+            canvas.height = img.height
+            ctx.drawImage(img, 0, 0) // 将图片绘制到canvas上
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height) // 从canvas获取ImageData
+            URL.revokeObjectURL(url) // 释放临时URL
+            resolve(imageData)
+          }
+        })
+      }
+
+      /**
+       * 获取全景图面数据
+       * @param file
+       */
+      async function getFaceImgData(file, face) {
+        try {
+          const imgData = await getImgDataFromFile(file)
+          return copyFaceData(imgData, face, 0, InterpolationEnum.Bilinear)
+        } catch (e) {
+          throw e
+        }
+      }
+
+      /**
+       * 获取图片数据url
+       * @param imgData
+       */
+      async function getImgUrl(imgData) {
+        try {
+          const blob = await imgDataToBlob(imgData, 'jpg')
+          return URL.createObjectURL(blob)
+        } catch (e) {
+          throw e
+        }
+      }
+
+      /**
+       * 获取文件六面url
+       * @param file 图片文件对象
+       */
+      async function get6FaceImgUrl(file) {
+        try {
+          const [pxData, nxData, nyData, pyData, nzData, pzData] = await Promise.all([
+            getFaceImgData(file, FaceEnum.PX),
+            getFaceImgData(file, FaceEnum.NX),
+            getFaceImgData(file, FaceEnum.NY),
+            getFaceImgData(file, FaceEnum.PY),
+            getFaceImgData(file, FaceEnum.NZ),
+            getFaceImgData(file, FaceEnum.PZ),
+          ])
+          const [pxUrl, nxUrl, nyUrl, pyUrl, nzUrl, pzUrl] = await Promise.all([
+            getImgUrl(pxData),
+            getImgUrl(nxData),
+            getImgUrl(nyData),
+            getImgUrl(pyData),
+            getImgUrl(nzData),
+            getImgUrl(pzData),
+          ])
+          return [pxUrl, nxUrl, nyUrl, pyUrl, nzUrl, pzUrl]
+        } catch (e) {
+          throw e
+        }
+      }
+
+      /**
+       * 下载url文件
+       * @param url 下载地址
+       * @param name 文件名
+       */
+      function downloadUrlFile(url, name) {
+        const a = document.createElement('a')
+        a.href = url
+        a.download = name
+        a.click()
+      }
+    </script>
+  </body>
+</html>
